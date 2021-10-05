@@ -80,9 +80,7 @@ const Contact: NextPage = () => {
           <p>{status}</p>
             { data.fields.map((field, index) => {
               return(
-                <div>
-                  <Field key={index} data={field} />
-                </div>
+                <Field key={index} data={field} />
               );
             })}
             <div>
