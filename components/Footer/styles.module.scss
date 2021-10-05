@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid var(--color-primary);
+  font-size: 1.6rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+  }
+  
+  div:first-child {
+    padding: 10px 0;
+    color: var(--color-withe);
+  }
+
+  div:last-child {
+    color:#444;
+    background-color: rgba($color: #fff, $alpha: .1);
+    font-size: 1.4rem;
+    padding: .2rem;
+  }
+
+  img {
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 2px;
+  }
+}

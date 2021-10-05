@@ -1,0 +1,63 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 800px;
+
+section.contact {
+  height: 100vh;
+
+  min-height: 820px;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  form {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    height: 100%;
+    width: 100%;
+    padding: var(--menu-height) var(--container-padding) 0;
+
+    font-size: 2rem;
+    
+    div {
+      width: 100%;
+      display: block;
+
+      label {
+        margin: 8px 10px 5px;
+        font-weight: 300;
+        display: block;
+      }
+      input, textarea {
+        color:  var(--color-withe);
+        
+        padding: 10px;
+        width: 100%;
+        background: var(--color-scondary-opacity);
+        border: solid 1px var(--color-withe);
+  
+        border-radius: 10px;
+      }
+      input[type=submit] {
+        width: 50%;
+        float: right;
+        text-transform: uppercase;
+        color: var(--color-withe);
+      }
+      textarea {
+        height: 100px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) { 
+
+    input[type=submit] {
+      width: 100% !important;
+    }
+  }
+
+}
