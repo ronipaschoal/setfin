@@ -1,7 +1,7 @@
 export const dataArray = [
   {
     id: 'about',
-    background: '#ffffff99',
+    background: '',
     title: [
       'Quem somos', 
       ''

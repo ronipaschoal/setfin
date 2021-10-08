@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import { useContext } from 'react';
+import Image from 'next/image';
 
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
@@ -24,7 +25,7 @@ const SectionTwoParty: NextPage<Props> = ({ index }) => {
       }}>
       
       <div className={`${styles.image} image`}>
-        <img src={data.image.src} alt={data.image.alt} />
+        <Image src={data.image.src} alt={data.image.alt} height="738" width="901" />
       </div>
 
       <div>

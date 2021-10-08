@@ -2,7 +2,6 @@ export const dataArray = [
   {
     id: 'home',
     position: 'left',
-    background: '',
     image: {
       src: '/images/home.png',
       alt: 'SetFin Logo',
@@ -24,7 +23,6 @@ export const dataArray = [
   // {
   //   'id': 'features',
   //   'position': 'right',
-  //   'background': '',
   //   'image': './images/continuous.png',
   //   'title': [
   //     'Estrategia',

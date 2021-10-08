@@ -17,6 +17,7 @@ const Field: NextPage<field> = ({ data }) => {
   
   const formContext = useContext(FormContext);
   const language = useContext(LanguageContext).languageActive;
+  const { name, label, type, placeholder } = data;
 
   function handleChange(evt: any) {
 
@@ -29,21 +30,21 @@ const Field: NextPage<field> = ({ data }) => {
 
   return (
     <>
-      <label htmlFor={data.name}>{ data.label[language] }</label>
-      { data.type == "input" &&
+      <label htmlFor={name}>{ label[language] }</label>
+      { type == "input" &&
         <input type="text"
-          name={data.name}
-          id={data.name}
-          value={formContext.fieldState[data.name]}
+          name={name}
+          id={name}
+          value={formContext.fieldState[name]}
           onChange={handleChange}
-          placeholder={ data.placeholder[language] } />
+          placeholder={ placeholder[language] } />
       }
-      { data.type == "textarea" &&
-        <textarea name={data.name}
-          id={data.name}
-          value={formContext.fieldState[data.name]}
+      { type == "textarea" &&
+        <textarea name={name}
+          id={name}
+          value={formContext.fieldState[name]}
           onChange={handleChange}
-          placeholder={ data.placeholder[language] } />
+          placeholder={ placeholder[language] } />
       }
   </>
   );

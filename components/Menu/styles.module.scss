@@ -12,7 +12,7 @@ header.header {
     }
     
 
-    width: 100%;
+    width: 100vw;
     height: var(--menu-height);
     padding: 0 var(--container-padding) 0;
 
@@ -24,7 +24,8 @@ header.header {
     justify-content: space-between;
     align-items: center;
     
-    background-color: var(--color-primary);
+    background: rgb(16, 54, 59);
+    background: linear-gradient(-90deg, rgb(2, 46, 66) 0%, rgb(31, 67, 82) 34%, rgb(16, 54, 59) 100%);
 
     .bar {
       display: block;
@@ -64,6 +65,8 @@ header.header {
         text-transform: capitalize;
         font-weight: 300;
         opacity: .6;
+        font-family: 'Dekar-Light', sans-serif;
+        letter-spacing: .4rem;
         
         cursor: pointer;
         

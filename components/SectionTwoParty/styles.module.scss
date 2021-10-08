@@ -9,10 +9,19 @@ $breakpoint-desktop: 800px;
   align-items: center;
   justify-content: center;
 
+  // background-image: url(../../public/images/background.jpg);
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-size: cover;
+
   div {
     height: 100vh;
     width: 50%;
-    
+
+    * {
+      width: 100%;
+    }
+
     font-size: 1.6rem;
 
     display: flex;
@@ -28,14 +37,11 @@ $breakpoint-desktop: 800px;
   }
 
   .image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     z-index: 1;
 
-    img {
-      height: 80%;
-    }
+    // img {
+    //   height: 80%;
+    // }
   }
 
   @media (max-width: $breakpoint-tablet) { 

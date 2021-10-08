@@ -10,10 +10,6 @@ import styles from './styles.module.scss';
 
 const Main: NextPage = () => {
 
-  const sections = {
-    about: 0
-  }
-
   return (
     <main>
       <Menu />

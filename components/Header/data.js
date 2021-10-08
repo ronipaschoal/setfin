@@ -5,6 +5,8 @@ export const data = {
     'We are the first startup in Brazil to accelerate accounting, financial and administrative processes!'
   ],
   fonts: [
-    'https://fonts.googleapis.com/css2?family=Orbitron&display=swap'
+    './font/nasalization-rg.otf',
+    './font/aroma-light.ttf',
+    './font/dekar-light.otf'
   ]
 }

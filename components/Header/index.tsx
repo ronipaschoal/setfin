@@ -10,19 +10,21 @@ import LanguageContext from '../../contexts/LanguageContext';
 const Header: NextPage = () => {
   
   const language = useContext(LanguageContext).languageActive;
+  const { title, fonts, description } = data;
 
   return (
     <Head>
-      <title>{ data.title }</title>
+      <title>{ title }</title>
 
-      { data.fonts.map((font, index) => {
+      { fonts.map((font, index) => {
         return(
-          <link key={index} href={font} rel="stylesheet" crossOrigin=""></link>
+          <link key={index} href={font} rel="preload" as="font" crossOrigin=""></link>
         );
       })}
       
-      <meta name="description" content={ data.description[language] } />
+      <meta name="description" content={ description[language] } />
       <link rel="icon" href="./images/favicon.png" type="image/png" />
+      <span className={styles.header} />
     </Head>
   );
 }

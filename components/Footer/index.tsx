@@ -8,7 +8,8 @@ import LanguageContext from '../../contexts/LanguageContext';
 
 const Footer: NextPage = () => {
 
-  const language = useContext(LanguageContext);
+  const language = useContext(LanguageContext).languageActive;
+  const { contact, designBy } = data;
 
   return (
     <footer className={styles.footer}>
@@ -20,10 +21,10 @@ const Footer: NextPage = () => {
             width={data.linkedin.logo.width}
             height={data.linkedin.logo.height} />
         </a> */}
-        <a href={ 'tel:' + data.contact.number } target="_blank" rel="noreferrer">{ data.contact.text[language.languageActive] }</a>
+        <a href={ 'tel:' + contact.number } target="_blank" rel="noreferrer">{ contact.text[language] }</a>
       </div>
       <div>
-        <a href={ data.designBy.link } target="_blank" rel="noreferrer">{ data.designBy.text }</a>
+        <a href={ designBy.link } target="_blank" rel="noreferrer">{ designBy.text }</a>
       </div>
     </footer>
   );

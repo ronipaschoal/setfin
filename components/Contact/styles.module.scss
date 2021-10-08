@@ -2,8 +2,8 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 800px;
 
 section.contact {
-  height: 100vh;
 
+  height: 100vh;
   min-height: 820px;
 
   display: flex;
@@ -26,22 +26,23 @@ section.contact {
       margin: 8px 10px 5px;
       font-weight: 300;
       display: block;
+      color: var(--color-scondary);
     }
     input, textarea {
       color:  var(--color-withe);
       
       padding: 10px;
       width: 100%;
-      background: var(--color-scondary-opacity);
-      border: solid 1px var(--color-withe);
+      background: none;
+      border: solid 1px var(--color-scondary);
 
-      border-radius: 10px;
+      border-radius: 4px;
     }
     input[type=submit] {
       width: 50%;
       float: right;
       text-transform: uppercase;
-      color: var(--color-withe);
+      color: var(--color-scondary);
     }
     textarea {
       height: 100px;
