@@ -11,6 +11,8 @@ header.header {
       height: 55px;
     }
     
+    background: var(--color-background);
+    background: var(--color-background-gradient);
 
     width: 100vw;
     height: var(--menu-height);
@@ -24,9 +26,6 @@ header.header {
     justify-content: space-between;
     align-items: center;
     
-    background: rgb(16, 54, 59);
-    background: linear-gradient(-90deg, rgb(2, 46, 66) 0%, rgb(31, 67, 82) 34%, rgb(16, 54, 59) 100%);
-
     .bar {
       display: block;
       width: 25px;
@@ -92,7 +91,8 @@ header.header {
     nav.navbar {
 
       .navMenu {
-        background-color: var(--color-primary);
+        background: var(--color-background);
+        background: var(--color-background-gradient);
         position: fixed;
         left: -100%;
         top: var(--menu-height);
