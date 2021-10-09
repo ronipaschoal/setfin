@@ -1,5 +1,7 @@
+@import '../../styles/variables';
+
 .footer {
-  border-top: 1px solid var(--color-scondary);
+  border-top: 1px solid $color-scondary;
   font-size: 1.6rem;
 
   div {
@@ -12,7 +14,7 @@
   
   div:first-child {
     padding: 10px 0;
-    color: var(--color-withe);
+    color: $color-withe;
   }
 
   div:last-child {

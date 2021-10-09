@@ -1,5 +1,4 @@
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 800px;
+@import '../../styles/variables';
 
 header.header {
  
@@ -11,12 +10,12 @@ header.header {
       height: 55px;
     }
     
-    background: var(--color-background);
-    background: var(--color-background-gradient);
+    background: $color-background;
+    background: $color-background-gradient;
 
     width: 100vw;
-    height: var(--menu-height);
-    padding: 0 var(--container-padding) 0;
+    height: $menu-height;
+    padding: 0 $container-padding 0;
 
     position: fixed;
     top: 0;
@@ -91,11 +90,11 @@ header.header {
     nav.navbar {
 
       .navMenu {
-        background: var(--color-background);
-        background: var(--color-background-gradient);
+        background: $color-background;
+        background: $color-background-gradient;
         position: fixed;
         left: -100%;
-        top: var(--menu-height);
+        top: $menu-height;
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
