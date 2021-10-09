@@ -26,15 +26,12 @@ $breakpoint-desktop: 800px;
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  
   body {
     font-size: 1.6rem;
     color:  var(--color-withe);
     
     background: var(--color-background);
     background: var(--color-background-gradient);
-    
-    overflow-x: hidden;
   }
 }
 
