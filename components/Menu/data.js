@@ -8,9 +8,10 @@ export const data = {
   },
   menu: [
     {section: 'home', title: ['Home', 'Home']},
-    {section: 'product', title: ['Produto', 'Product']},
-    {section: 'features', title: ['Recursos', 'Features']},
+    // {section: 'product', title: ['Produto', 'Product']},
+    // {section: 'features', title: ['Recursos', 'Features']},
     {section: 'about', title: ['Sobre', 'About']},
+    {section: 'so-far', title: ['Até Aqui', 'So Far']},
     {section: 'contact', title: ['Contato', 'Contact']}
   ],
   language: ['pt', 'en']

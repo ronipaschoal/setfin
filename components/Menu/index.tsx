@@ -20,18 +20,18 @@ const Menu: NextPage = () => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [navMenuActive, setNavMenuActive] = useState(false);
 
+  useEffect(()=>{
+    window.addEventListener('scroll', listenToScroll);
+  },[]);
+
   function selectMenu(menu: string) {
 
     setActiveMenu(menu);
     setHamburgerActive(false);
     setNavMenuActive(false);
   }
-  
+
   function listenToScroll() {
-    // const winScroll = document.body.scrollTop || document.documentElement.scrollTop
-    // const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    // const scrolled = winScroll / height;
-    // console.log(scrolled);
 
     data.menu.forEach(function(menu : Menu){
       
@@ -44,10 +44,6 @@ const Menu: NextPage = () => {
       }
     });
   }
-
-  useEffect(()=>{
-    window.addEventListener('scroll', listenToScroll);
-  },[]);
 
   return (
     <header id={data.id} className={styles.header}>

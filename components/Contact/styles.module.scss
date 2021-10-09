@@ -12,6 +12,14 @@ section.contact {
 
   form {
     
+    h2 {
+      padding-bottom: 3rem;
+    }
+
+    p {
+      text-align: center;
+     }
+
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -20,7 +28,7 @@ section.contact {
     width: 100%;
     padding: var(--menu-height) var(--container-padding) 0;
 
-    font-size: 2rem;
+    font-size: 1.6rem;
     
     label {
       margin: 8px 10px 5px;

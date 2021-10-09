@@ -9,30 +9,28 @@ $breakpoint-desktop: 800px;
   align-items: center;
   justify-content: center;
 
+  padding: var(--menu-height) var(--container-padding) 0;
+
   div {
     height: 100vh;
-    width: 70%;
-    
+    width: 50%;
+
     font-size: 1.6rem;
 
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: stretch;
     
     text-align: justify;
   }
   
   div:not(.image) {
-    padding: 50px;
     z-index: 1;
   }
 
   .image {
-    z-index: 1;
-
-    img {
-      height: 80%;
-    }
+    z-index: 0;
   }
 
   @media (max-width: $breakpoint-tablet) { 

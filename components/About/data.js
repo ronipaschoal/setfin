@@ -1,6 +1,6 @@
 export const data = {
-  id: 'about',
-  title: ['Nossa trilha...', 'Our trail...'],
+  id: 'so-far',
+  title: ['Até Aqui', 'So Far'],
   content: [
     { 
       title: ['2014', '2014'],

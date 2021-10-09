@@ -7,6 +7,7 @@ export const data = {
   fonts: [
     './font/nasalization-rg.otf',
     './font/aroma-light.ttf',
-    './font/dekar-light.otf'
+    './font/dekar-light.otf',
+    './font/roboto-thin.ttf'
   ]
 }
