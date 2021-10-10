@@ -10,9 +10,9 @@ export const data = {
     {section: 'home', title: ['Home', 'Home']},
     // {section: 'product', title: ['Produto', 'Product']},
     // {section: 'features', title: ['Recursos', 'Features']},
-    {section: 'about', title: ['Sobre', 'About']},
-    {section: 'so-far', title: ['Até Aqui', 'So Far']},
-    {section: 'contact', title: ['Contato', 'Contact']}
+    {section: 'about', title: ['Quem Somos', 'About']},
+    {section: 'process', title: ['Nosso Processo', 'Our Process']},
+    {section: 'contact', title: ['Fale Conosco', 'Contact Us']}
   ],
   language: ['pt', 'en']
 }

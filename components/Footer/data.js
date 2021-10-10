@@ -11,6 +11,7 @@ export const data = {
   },
   contact: {
     number: '+5511932744219',
+    email: 'commercial@setfin.com.br',
     text: ['Contato: +55 11 93274-4219', 'Contact: +55 11 93274-4219']
   },
   designBy: {

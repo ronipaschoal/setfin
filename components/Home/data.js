@@ -10,11 +10,11 @@ export const dataArray = [
     },
     title: [
       'SetFin Tecnologia', 
-      'We exist so that companies can use technology in favor of their business in an intelligent way!'
+      'SetFin Technology'
     ],
     content: [
       'Aceleradora de processos contábeis, financeiros e administrativos.',
-      'Our goal is to help companies manage in a simpler and optimized, through a complete system, intuitive, easy to use and with our differential, the uniqueness of your need.'
+      'Accelerator of accounting, financial and administrative processes.'
     ]
   }
 

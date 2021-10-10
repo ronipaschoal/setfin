@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Nasalization-Rg";
+  src: url(../public/font/nasalization-rg.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Aroma-Light";
+  src: url(../public/font/aroma-light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Dekar-Light";
+  src: url(../public/font/dekar-light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../public/font/roboto-thin.ttf) format("truetype");
+}
+
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 800px;
 
@@ -5,9 +25,9 @@ $color-withe: #ddd;
 $color-primary: #00678A;
 $color-scondary: #00ebeb;
 $color-scondary-opacity: #2799DB11;
-$color-background: rgb(16, 54, 59);
+$color-background: rgb(0, 104, 138);
 $color-background-gradient: linear-gradient(
-  -90deg, rgb(2, 46, 66) 0%, rgb(31, 67, 82) 34%, rgb(16, 54, 59) 100%);
+  90deg, rgb(0, 74, 99) 0%,rgb(7, 32, 36) 100%);
 
 $menu-height: 5.6rem;
 $container-padding: 5%;

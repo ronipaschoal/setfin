@@ -1,6 +1,6 @@
 export const data = {
   id: 'contact',
-  title: ['Fale com a gente!', 'Talk to us!'],
+  title: ['Fale Conosco!', 'Contact Us!'],
   fields: [
     {
       name: 'name',

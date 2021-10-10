@@ -17,14 +17,18 @@ const Section: NextPage<Props> = ({ index }) => {
   
   return (
     <section id={data.id}
-      className={styles.section}
-      style={{
-        background : data.background
-      }}>
+      className={styles.section}>
 
       <div>
         <h2>{data.title[language]}</h2>
-        <p>{data.content[language]}</p>
+        { data.content.map((content, index) => {
+        return(
+          <>
+            <p key={index}>{content[language]}</p>
+            <br />
+          </>
+        );
+      })}
       </div>
       
     </section>

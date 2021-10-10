@@ -3,7 +3,7 @@
 section.contact {
 
   height: 100vh;
-  min-height: 820px;
+  min-height: 600px;
 
   display: flex;
   align-items: start;
@@ -28,28 +28,20 @@ section.contact {
     padding: $menu-height $container-padding 0;
 
     font-size: 1.6rem;
-    
-    label {
-      margin: 8px 10px 5px;
-      font-weight: 300;
-      display: block;
-      color: $color-scondary;
-    }
-    input, textarea {
-      color:  $color-withe;
-      
-      padding: 10px;
-      width: 100%;
-      background: none;
-      border: solid 1px $color-scondary;
 
-      border-radius: 4px;
-    }
     input[type=submit] {
+      padding: 10px;
       width: 50%;
-      float: right;
-      text-transform: uppercase;
+
       color: $color-scondary;
+      
+      background: none !important;
+      border: solid 1px $color-scondary;
+      
+      border-radius: 4px;
+      float: right;
+      
+      text-transform: uppercase;
     }
     textarea {
       height: 100px;

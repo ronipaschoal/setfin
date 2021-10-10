@@ -1,5 +1,7 @@
 import { NextPage } from 'next';
-import { useContext } from 'react';
+import { Fragment, useContext } from 'react';
+
+import styles from './styles.module.scss';
 
 import LanguageContext from '../../contexts/LanguageContext';
 import FormContext from '../../contexts/FormContext';
@@ -29,24 +31,30 @@ const Field: NextPage<field> = ({ data }) => {
   }
 
   return (
-    <>
-      <label htmlFor={name}>{ label[language] }</label>
+    <span className={styles.field}>
       { type == "input" &&
-        <input type="text"
-          name={name}
-          id={name}
-          value={formContext.fieldState[name]}
-          onChange={handleChange}
-          placeholder={ placeholder[language] } />
+        <div className={styles.input}>
+          <label htmlFor={name}>{ label[language] }</label>
+          <input type="text"
+            name={name}
+            id={name}
+            value={formContext.fieldState[name]}
+            onChange={handleChange}
+            placeholder={ placeholder[language] } />
+        </div>
       }
       { type == "textarea" &&
-        <textarea name={name}
-          id={name}
-          value={formContext.fieldState[name]}
-          onChange={handleChange}
-          placeholder={ placeholder[language] } />
+        <div className={styles.textarea}>
+          <label htmlFor={name}>{ label[language] }</label>
+          <textarea
+            name={name}
+            id={name}
+            value={formContext.fieldState[name]}
+            onChange={handleChange}
+            placeholder={ placeholder[language] } />
+        </div>
       }
-  </>
+  </span>
   );
 }
 

@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+span.field {
+
+  label {
+    padding-left: 1.2rem;
+    font-weight: 300;
+    display: block;
+    color: $color-scondary;
+    width: 90px;
+    border-right: 1px solid $color-scondary;
+    z-index: 3;
+  }
+
+  input, textarea {
+    color:  $color-withe;
+    margin-bottom: 12px;
+    
+    padding: 10px;
+    width: 100%;
+    background: none !important;
+    border: solid 1px $color-scondary;
+
+    border-radius: 4px;
+
+    padding-left: 110px;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $color-primary inset;
+  }
+
+  .input {
+    label {
+      margin-bottom: -28px;
+    }
+  }
+
+  .textarea {
+
+    margin-top: 5px;
+
+    label {
+      margin-bottom: -88px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+  }
+
+}

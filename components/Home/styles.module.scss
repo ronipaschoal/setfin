@@ -6,8 +6,6 @@
 
   width: 100%;
   
-  overflow: hidden;
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,9 +29,10 @@
   div:not(.image) {
     z-index: 1;
   }
-
+  
   .image {
     z-index: 0;
+    overflow: hidden;
   }
 
   @media (max-width: $breakpoint-tablet) { 
