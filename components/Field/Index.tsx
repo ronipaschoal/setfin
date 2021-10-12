@@ -18,7 +18,7 @@ interface field {
 const Field: NextPage<field> = ({ data }) => {
   
   const formContext = useContext(FormContext);
-  const language = useContext(LanguageContext).languageActive;
+  const { languageActive } = useContext(LanguageContext);
   const { name, label, type, placeholder } = data;
 
   function handleChange(evt: any) {
@@ -34,24 +34,24 @@ const Field: NextPage<field> = ({ data }) => {
     <span className={styles.field}>
       { type == "input" &&
         <div className={styles.input}>
-          <label htmlFor={name}>{ label[language] }</label>
+          <label htmlFor={name}>{ label[languageActive] }</label>
           <input type="text"
             name={name}
             id={name}
             value={formContext.fieldState[name]}
             onChange={handleChange}
-            placeholder={ placeholder[language] } />
+            placeholder={ placeholder[languageActive] } />
         </div>
       }
       { type == "textarea" &&
         <div className={styles.textarea}>
-          <label htmlFor={name}>{ label[language] }</label>
+          <label htmlFor={name}>{ label[languageActive] }</label>
           <textarea
             name={name}
             id={name}
             value={formContext.fieldState[name]}
             onChange={handleChange}
-            placeholder={ placeholder[language] } />
+            placeholder={ placeholder[languageActive] } />
         </div>
       }
   </span>

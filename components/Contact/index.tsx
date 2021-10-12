@@ -11,7 +11,8 @@ import FormContext from '../../contexts/FormContext';
 
 const Contact: NextPage = () => {
 
-  const language = useContext(LanguageContext);
+  const { languageActive } = useContext(LanguageContext);
+  const { id, fields, title, status, submit } = data;
 
   const [fieldState, setFieldState] = useState({
     name: "",
@@ -21,7 +22,7 @@ const Contact: NextPage = () => {
     message: ""
   });
   
-  const [status, setStatus] = useState('');
+  const [formStatus, setFormStatus] = useState('');
   
   const handleSubmit = async (e: FormEvent) => {
 
@@ -41,7 +42,7 @@ const Contact: NextPage = () => {
 
     var errorSending = false;
 
-    setStatus(data.status.progress[language.languageActive]);
+    setFormStatus(status.progress[languageActive]);
 
     const response = await fetch(API_PATH, requestOptions).then(response =>{
       return response.json();
@@ -49,7 +50,7 @@ const Contact: NextPage = () => {
       console.log(data.success);
     }).catch(function(error) {
       errorSending = true;
-      setStatus(data.status.error[language.languageActive]);
+      setFormStatus(status.error[languageActive]);
       console.log('There has been a problem with your fetch operation: ' + error.message);
     });
 
@@ -58,7 +59,7 @@ const Contact: NextPage = () => {
     setTimeout(
       function() {
         if(!errorSending) {
-          setStatus(data.status.success[language.languageActive]);
+          setFormStatus(status.success[languageActive]);
           setFieldState({
             name: "",
             company: "",
@@ -74,17 +75,17 @@ const Contact: NextPage = () => {
 
   return (
     <FormContext.Provider value={{ fieldState, setFieldState }} >
-      <section id={data.id} className={styles.contact}>
+      <section id={id} className={styles.contact}>
         <form onSubmit={ e => handleSubmit(e) }>
-          <h2>{data.title[language.languageActive]}</h2>
-          <p>{status}</p>
-            { data.fields.map((field, index) => {
+          <h2>{title[languageActive]}</h2>
+          <p>{formStatus}</p>
+            { fields.map((field, index) => {
               return(
                 <Field key={index} data={field} />
               );
             })}
             <div>
-              <input type="submit" value={ data.submit[language.languageActive] } />
+              <input type="submit" value={ submit[languageActive] } />
             </div>
         </form>
       </section>

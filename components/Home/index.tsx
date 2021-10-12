@@ -13,29 +13,29 @@ interface Props {
 
 const Home: NextPage<Props> = ({ index }) => {
 
-  const language = useContext(LanguageContext).languageActive;
-  const data = dataArray[index];
+  const { languageActive } = useContext(LanguageContext);
+  const { id, position, image, title, content } = dataArray[index];
   
   return (
-    <section id={data.id}
+    <section id={id}
       
       className={styles.section}
       style={{ 
-        flexDirection: data.position == 'left' ? 'row-reverse' : 'row'
+        flexDirection: position == 'left' ? 'row-reverse' : 'row'
       }}>
       
       <div className={`${styles.image} image`}>
         <Image
-          src={data.image.src}
-          alt={data.image.alt}
-          height={data.image.height}
-          width={data.image.width}
+          src={image.src}
+          alt={image.alt}
+          height={image.height}
+          width={image.width}
           layout="fixed" />
       </div>
 
       <div>
-        <h1>{data.title[language]}</h1>
-        <p>{data.content[language]}</p>
+        <h1>{title[languageActive]}</h1>
+        <p>{content[languageActive]}</p>
       </div>
       
     </section>

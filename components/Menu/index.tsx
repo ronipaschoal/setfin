@@ -14,9 +14,10 @@ interface Menu {
 
 const Menu: NextPage = () => {
 
-  const language = useContext(LanguageContext);
-  
-  const [activeMenu, setActiveMenu] = useState(data.menu[0].section);
+  const { languageActive, setLanguageActive } = useContext(LanguageContext);
+  const { id, menu, logo, language } = data;
+
+  const [activeMenu, setActiveMenu] = useState(menu[0].section);
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [navMenuActive, setNavMenuActive] = useState(false);
 
@@ -33,7 +34,7 @@ const Menu: NextPage = () => {
 
   function listenToScroll() {
 
-    data.menu.forEach(function(menu : Menu){
+    menu.forEach(function(menu : Menu){
       
       const menuItem = document.querySelector(`#${menu.section}`);
       if(menuItem == null) { return; }
@@ -46,19 +47,19 @@ const Menu: NextPage = () => {
   }
 
   return (
-    <header id={data.id} className={styles.header}>
+    <header id={id} className={styles.header}>
 
       <nav className={styles.navbar}>
 
         <div className={styles.logo}>
-          <a href={`#${data.menu[language.languageActive].section}`} 
+          <a href={`#${menu[languageActive].section}`} 
             className={styles.navLogo} 
-            onClick={ () => selectMenu(data.menu[language.languageActive].section) }>
+            onClick={ () => selectMenu(menu[languageActive].section) }>
 
-            <Image src={data.logo.src}
-              alt={data.logo.alt}
-              width={data.logo.width}
-              height={data.logo.height}
+            <Image src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
               layout="fixed" />
           </a>
         </div>
@@ -66,23 +67,22 @@ const Menu: NextPage = () => {
         <ul className={navMenuActive 
           ? `${styles.active} ${styles.navMenu}` : styles.navMenu}>
 
-          { data.menu.map((menu, index) => {
+          { menu.map((menu, index) => {
             return(
               <li key={index} className={styles.navItem}>
                 <a href={`#${menu.section}`} onClick={ () => selectMenu(menu.section) } 
                   className={activeMenu == menu.section ?
                   `${styles.active} ${styles.navLink}` : styles.navLink}>
-                  { menu.title[language.languageActive] }
+                  { menu.title[languageActive] }
                 </a>
               </li>
             );
           })}
           <li className={styles.navItem}>
             <a className={styles.language} onClick={ () => {
-              language.setLanguageActive(language.languageActive ? 0 : 1);
+              setLanguageActive(languageActive ? 0 : 1);
             }} >
-              {data.language[language.languageActive]}
-              {/* <img src={ `../../images/${data.language[language.languageActive]}.png` } alt={data.language[language.languageActive]} /> */}
+              {language[languageActive]}
             </a>
           </li>
         </ul>

@@ -8,7 +8,7 @@ import LanguageContext from '../../contexts/LanguageContext';
 
 const Header: NextPage = () => {
   
-  const language = useContext(LanguageContext).languageActive;
+  const { languageActive } = useContext(LanguageContext);
   const { title, fonts, description } = data;
 
   return (
@@ -21,7 +21,7 @@ const Header: NextPage = () => {
         );
       })}
       
-      <meta name="description" content={ description[language] } />
+      <meta name="description" content={ description[languageActive] } />
       <link rel="icon" href="./images/favicon.png" type="image/png" />
     </Head>
   );

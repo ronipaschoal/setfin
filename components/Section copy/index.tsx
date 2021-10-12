@@ -13,21 +13,21 @@ interface Props {
 
 const SectionIcons: NextPage<Props> = ({ index }) => {
 
-  const language = useContext(LanguageContext).languageActive;
-  const data = dataArray[index];
+  const { languageActive } = useContext(LanguageContext);
+  const { id, title, content } = dataArray[index];
   
   return (
-    <section id={data.id}
+    <section id={id}
       className={styles.section}>
 
       <div>
-        <h2>{data.title[language]}</h2>
+        <h2>{title[languageActive]}</h2>
         <div>
-          { data.content.map((content, index) => {
+          { content.map((content, index) => {
           return(
             <div key={index}>
               <Image src={content.image} alt="teste" height="100px" width="100px" layout="fixed" />
-              <h3>{content.title[language]}</h3>
+              <h3>{content.title[languageActive]}</h3>
             </div>
           );
         })}

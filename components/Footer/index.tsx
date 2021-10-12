@@ -8,25 +8,35 @@ import LanguageContext from '../../contexts/LanguageContext';
 
 const Footer: NextPage = () => {
 
-  const language = useContext(LanguageContext).languageActive;
+  const { languageActive } = useContext(LanguageContext);
   const { contact, designBy } = data;
 
   return (
     <footer className={styles.footer}>
       <div>
-        {/* <a href={ data.linkedin.link } target="_blank" rel="noreferrer">
+        {/* <a href={ linkedin.link } target="_blank" rel="noreferrer">
           <Image 
-            src={data.linkedin.logo.src}
-            alt={data.linkedin.logo.alt}
-            width={data.linkedin.logo.width}
-            height={data.linkedin.logo.height} />
+            src={linkedin.logo.src}
+            alt={linkedin.logo.alt}
+            width={linkedin.logo.width}
+            height={linkedin.logo.height} />
         </a> */}
         <ul>
           <li>
-            <a href={ 'tel:' + contact.tel.number } target="_blank" rel="noreferrer">{ contact.tel.text[language] }</a>
+            <a
+              href={ 'tel:' + contact.tel.number }
+              target="_blank"
+              rel="noreferrer">
+                { contact.tel.text[languageActive] }
+            </a>
           </li>
           <li>
-            <a href={ 'mailto:' + contact.email.email } target="_blank" rel="noreferrer">{ contact.email.text[language] }</a>
+            <a
+              href={ 'mailto:' + contact.email.email }
+              target="_blank"
+              rel="noreferrer">
+                { contact.email.text[languageActive] }
+            </a>
           </li>
         </ul>
       </div>

@@ -8,18 +8,18 @@ import LanguageContext from '../../contexts/LanguageContext';
 
 const Timeline: NextPage = () => {
 
-  const language = useContext(LanguageContext);
-  
+  const { languageActive } = useContext(LanguageContext);
+  const { id, title, contents } = data;
   return (
-    <section className={styles.about} id={data.id}>
-      <h2>{data.title[language.languageActive]}</h2>
+    <section className={styles.about} id={id}>
+      <h2>{title[languageActive]}</h2>
       <div>
-        { data.content.map((content, index) => {
+        { contents.map((content, index) => {
           return(
             <div key={index} >
-              <h3>{content.title[language.languageActive]}</h3>
+              <h3>{content.title[languageActive]}</h3>
               <hr />
-              <p>{content.content[language.languageActive]}</p>
+              <p>{content.content[languageActive]}</p>
             </div>
           );
         })}

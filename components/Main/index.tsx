@@ -4,11 +4,9 @@ import Menu from '../Menu';
 import Home from '../Home';
 import SectionTwoParty from '../SectionTwoParty';
 import Section from '../Section';
-import SectionIcons from '../SectionIcons';
-import Timeline from '../Timeline';
+import SectionIcons from '../Section copy';
+import Timeline from '../About';
 import Contact from '../Contact';
-
-import styles from './styles.module.scss';
 
 const Main: NextPage = () => {
 

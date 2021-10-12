@@ -12,19 +12,19 @@ interface Props {
 
 const Section: NextPage<Props> = ({ index }) => {
 
-  const language = useContext(LanguageContext).languageActive;
-  const data = dataArray[index];
+  const { languageActive } = useContext(LanguageContext);
+  const { id, title, content } = dataArray[index];
   
   return (
-    <section id={data.id}
+    <section id={id}
       className={styles.section}>
 
       <div>
-        <h2>{data.title[language]}</h2>
-        { data.content.map((content, index) => {
+        <h2>{title[languageActive]}</h2>
+        { content.map((content, index) => {
         return(
           <span key={index}>
-            <p>{content[language]}</p>
+            <p>{content[languageActive]}</p>
             <br />
           </span>
         );

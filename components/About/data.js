@@ -1,7 +1,7 @@
 export const data = {
   id: 'process',
   title: ['Nosso Processo', 'Our Process'],
-  content: [
+  contents: [
     { 
       title: ['Mapping', 'Mapping'],
       content: ['Mapeamento de todos os processos do cliente.', 'Mapping of all customer processes.'] 
