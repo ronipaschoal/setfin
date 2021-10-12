@@ -58,7 +58,8 @@ const Menu: NextPage = () => {
             <Image src={data.logo.src}
               alt={data.logo.alt}
               width={data.logo.width}
-              height={data.logo.height} />
+              height={data.logo.height}
+              layout="fixed" />
           </a>
         </div>
 

@@ -34,7 +34,7 @@ h2 {
   @media (max-width: $breakpoint-tablet) { 
     font-size: 4rem;
   }
-  padding-bottom: 5rem
+  padding-bottom: 5rem;
 }
 
 h3 {
@@ -46,4 +46,9 @@ h3 {
 
 p {
   line-height: 2.5rem;
+}
+
+section {
+  max-width: $container-max-width;
+  margin: 0 auto;
 }

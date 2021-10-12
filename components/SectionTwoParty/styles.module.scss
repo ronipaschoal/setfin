@@ -37,7 +37,9 @@
 
   .image {
     z-index: 1;
-
+    div {
+      margin: 0 auto;
+    }
     // img {
     //   height: 80%;
     // }

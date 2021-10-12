@@ -6,7 +6,7 @@ import { data } from './data.js';
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
 
-const About: NextPage = () => {
+const Timeline: NextPage = () => {
 
   const language = useContext(LanguageContext);
   
@@ -18,6 +18,7 @@ const About: NextPage = () => {
           return(
             <div key={index} >
               <h3>{content.title[language.languageActive]}</h3>
+              <hr />
               <p>{content.content[language.languageActive]}</p>
             </div>
           );
@@ -27,4 +28,4 @@ const About: NextPage = () => {
   );
 }
 
-export default About;
+export default Timeline;

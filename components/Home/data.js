@@ -5,8 +5,8 @@ export const dataArray = [
     image: {
       src: '/images/home.png',
       alt: 'SetFin Logo',
-      height: 738,
-      width: 900
+      height: 472,
+      width: 576
     },
     title: [
       'SetFin Tecnologia', 

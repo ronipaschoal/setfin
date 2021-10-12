@@ -28,8 +28,8 @@ const Home: NextPage<Props> = ({ index }) => {
         <Image
           src={data.image.src}
           alt={data.image.alt}
-          height="472"
-          width="576"
+          height={data.image.height}
+          width={data.image.width}
           layout="fixed" />
       </div>
 

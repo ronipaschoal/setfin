@@ -3,16 +3,28 @@
 .footer {
   border-top: 1px solid $color-scondary;
   font-size: 1.6rem;
+  
+  li {
+    display: block;
+    margin: 1rem;
+  }
 
   div {
+    
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     gap: 40px;
   }
   
   div:first-child {
+    
+    max-width: $container-max-width;
+    margin: 0 auto;
+    
+    padding: 0 $container-padding 0;
+
     padding: 10px 0;
     color: $color-withe;
   }

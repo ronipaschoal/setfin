@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.section {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: center;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-tablet) { 
+    min-height: 1200px;
+  }
+
+  div {
+    width: 100%;
+    
+    font-size: 1.6rem;
+
+    div {
+      padding: 0 !important;
+      
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+      
+      text-align: center;
+      row-gap: 15px;
+      
+      div {
+        width: 20%;
+        // height: 20rem;
+        @media (max-width: $breakpoint-tablet) { 
+          width: 50%;
+        }
+
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: center;
+        
+        h3 {
+          padding: 1rem;
+          font-size: 2.6rem;
+        }
+
+      }
+    }
+  }
+
+}

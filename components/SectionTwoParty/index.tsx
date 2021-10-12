@@ -25,11 +25,16 @@ const SectionTwoParty: NextPage<Props> = ({ index }) => {
       }}>
       
       <div className={`${styles.image} image`}>
-        <Image src={data.image.src} alt={data.image.alt} height="738" width="901" />
+        <Image
+          src={data.image.src}
+          alt={data.image.alt}
+          height={data.image.height}
+          width={data.image.width}
+          layout="fixed" />
       </div>
 
       <div>
-        <h2>{data.title[language]}</h2>
+        <h3>{data.title[language]}</h3>
         <p>{data.content[language]}</p>
       </div>
       

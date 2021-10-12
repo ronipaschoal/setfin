@@ -21,7 +21,14 @@ const Footer: NextPage = () => {
             width={data.linkedin.logo.width}
             height={data.linkedin.logo.height} />
         </a> */}
-        <a href={ 'tel:' + contact.number } target="_blank" rel="noreferrer">{ contact.text[language] }</a>
+        <ul>
+          <li>
+            <a href={ 'tel:' + contact.tel.number } target="_blank" rel="noreferrer">{ contact.tel.text[language] }</a>
+          </li>
+          <li>
+            <a href={ 'mailto:' + contact.email.email } target="_blank" rel="noreferrer">{ contact.email.text[language] }</a>
+          </li>
+        </ul>
       </div>
       <div>
         <a href={ designBy.link } target="_blank" rel="noreferrer">{ designBy.text }</a>

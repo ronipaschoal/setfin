@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import { useContext } from 'react';
+import Image from 'next/image';
 
 import {dataArray} from './data.js';
 
@@ -10,7 +11,7 @@ interface Props {
   index: number;
 }
 
-const Section: NextPage<Props> = ({ index }) => {
+const SectionIcons: NextPage<Props> = ({ index }) => {
 
   const language = useContext(LanguageContext).languageActive;
   const data = dataArray[index];
@@ -21,18 +22,20 @@ const Section: NextPage<Props> = ({ index }) => {
 
       <div>
         <h2>{data.title[language]}</h2>
-        { data.content.map((content, index) => {
-        return(
-          <span key={index}>
-            <p>{content[language]}</p>
-            <br />
-          </span>
-        );
-      })}
+        <div>
+          { data.content.map((content, index) => {
+          return(
+            <div key={index}>
+              <Image src={content.image} alt="teste" height="100px" width="100px" layout="fixed" />
+              <h3>{content.title[language]}</h3>
+            </div>
+          );
+        })}
+        </div>
       </div>
       
     </section>
   );
 }
 
-export default Section;
+export default SectionIcons;

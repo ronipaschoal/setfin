@@ -10,9 +10,14 @@ export const data = {
     }
   },
   contact: {
-    number: '+5511932744219',
-    email: 'commercial@setfin.com.br',
-    text: ['Contato: +55 11 93274-4219', 'Contact: +55 11 93274-4219']
+    tel: {
+      number: '+5511932744219',
+      text: ['Contato: +55 11 93274-4219', 'Contact: +55 11 93274-4219']
+    }, 
+    email: {
+      email: 'commercial@setfin.com.br',
+      text: ['E-mail: commercial@setfin.com.br', 'Email: commercial@setfin.com.br']
+    }
   },
   designBy: {
     link: 'https://ronipaschoal.com.br',

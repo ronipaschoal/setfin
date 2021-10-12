@@ -1,29 +1,33 @@
 @import '../../styles/variables';
 
 header.header {
+  
+  background: $color-background;
+  background: $color-background-gradient;
  
+  height: $menu-height;
+  width: 100vw;
+  
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
   nav.navbar {
+    
+    max-width: $container-max-width;
+    margin: 0 auto;
+    
+    padding: 0 $container-padding 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
     img {
       /* Original 325 x 131 */
       width: auto;
       height: 55px;
     }
-    
-    background: $color-background;
-    background: $color-background-gradient;
-
-    width: 100vw;
-    height: $menu-height;
-    padding: 0 $container-padding 0;
-
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     
     .bar {
       display: block;

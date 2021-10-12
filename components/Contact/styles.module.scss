@@ -6,8 +6,8 @@ section.contact {
   min-height: 600px;
 
   display: flex;
-  align-items: start;
-  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 
   form {
     
@@ -23,7 +23,6 @@ section.contact {
     flex-direction: column;
     gap: 10px;
     
-    height: 100%;
     width: 100%;
     padding: $menu-height $container-padding 0;
 

@@ -2,8 +2,10 @@ import { NextPage } from 'next';
 
 import Menu from '../Menu';
 import Home from '../Home';
+import SectionTwoParty from '../SectionTwoParty';
 import Section from '../Section';
-import About from '../About';
+import SectionIcons from '../SectionIcons';
+import Timeline from '../Timeline';
 import Contact from '../Contact';
 
 import styles from './styles.module.scss';
@@ -15,7 +17,9 @@ const Main: NextPage = () => {
       <Menu />
       <Home index={0} />
       <Section index={0} />
-      <About />
+      <SectionTwoParty index={0} />
+      <SectionIcons index={0} />
+      <Timeline />
       <Contact />
     </main>
   );
