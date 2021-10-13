@@ -26,7 +26,7 @@ const SectionIcons: NextPage<Props> = ({ index }) => {
           { content.map((content, index) => {
           return(
             <div key={index}>
-              <Image src={content.image} alt="teste" height="100px" width="100px" layout="fixed" />
+              <Image src={content.image} height="60px" width="60px" layout="fixed" />
               <h3>{content.title[languageActive]}</h3>
             </div>
           );

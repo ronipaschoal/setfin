@@ -65,14 +65,16 @@ const Menu: NextPage = () => {
         </div>
 
         <ul className={navMenuActive 
-          ? `${styles.active} ${styles.navMenu}` : styles.navMenu}>
+          ? styles.active : ''}>
 
           { menu.map((menu, index) => {
             return(
-              <li key={index} className={styles.navItem}>
-                <a href={`#${menu.section}`} onClick={ () => selectMenu(menu.section) } 
-                  className={activeMenu == menu.section ?
-                  `${styles.active} ${styles.navLink}` : styles.navLink}>
+              <li key={index} className={activeMenu == menu.section ?
+                styles.active : ''}>
+                
+                <a
+                  href={`#${menu.section}`}
+                  onClick={ () => selectMenu(menu.section) }>
                   { menu.title[languageActive] }
                 </a>
               </li>

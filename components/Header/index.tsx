@@ -17,7 +17,7 @@ const Header: NextPage = () => {
 
       { fonts.map((font, index) => {
         return(
-          <link key={index} href={font} rel="preload" as="font" crossOrigin=""></link>
+          <link key={index} href={font} as="font" crossOrigin=""></link>
         );
       })}
       
