@@ -64,13 +64,17 @@ header.header {
       }
       
       li {
-        width: 100%;
-    
+        width: 50%;
+
+        margin: 0 auto;
         padding: 2.5rem 0;
 
         &.active, &:hover:not(.active) {
+
           border-bottom: #fff .2rem solid;
-          opacity: 1;
+          a {
+            opacity: 1;
+          }
         }
 
         a {

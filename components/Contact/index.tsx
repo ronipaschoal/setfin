@@ -14,14 +14,15 @@ const Contact: NextPage = () => {
   const { languageActive } = useContext(LanguageContext);
   const { id, fields, title, status, submit } = data;
 
-  const [fieldState, setFieldState] = useState({
+  const newMessage = {
     name: "",
     company: "",
     email: "",
     phone: "",
     message: ""
-  });
-  
+  }
+
+  const [fieldState, setFieldState] = useState(newMessage);
   const [formStatus, setFormStatus] = useState('');
   
   const handleSubmit = async (e: FormEvent) => {
@@ -36,37 +37,22 @@ const Contact: NextPage = () => {
 
     const service = 'https://fiversystem.com/setfin/mail.php?';
     const API_PATH = `${service}${param.substring(0, param.length - 1)}`;    
-    const requestOptions = {
-        method: 'get',
-    };
-
-    var errorSending = false;
+    const requestOptions = { method: 'get' };
 
     setFormStatus(status.progress[languageActive]);
 
-    const response = await fetch(API_PATH, requestOptions).then(response =>{
-      return response.json();
-    }).then(data => {
-      console.log(data.success);
-    }).catch(function(error) {
-      errorSending = true;
-      setFormStatus(status.error[languageActive]);
-      console.log('There has been a problem with your fetch operation: ' + error.message);
-    });
+    const response = await fetch(API_PATH, requestOptions)
+      .then(response => response.json())
+      .then(data => data)
+      .catch(error => error);
 
-
-    console.log(API_PATH);
     setTimeout(
       function() {
-        if(!errorSending) {
+        if(response.success === true) {
           setFormStatus(status.success[languageActive]);
-          setFieldState({
-            name: "",
-            company: "",
-            email: "",
-            phone: "",
-            message: ""
-          });
+          setFieldState(newMessage);
+        } else {
+          setFormStatus(status.error[languageActive]);
         }
       }.bind(this),
       3000
