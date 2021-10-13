@@ -2,48 +2,50 @@
 
 .section {
   height: 100vh;
-  min-height: 600px;
-
+  min-height: 60rem;
   width: 100%;
+
+  padding: $menu-height $container-padding 0;
   
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: $menu-height $container-padding 0;
-
   div {
     height: 100vh;
-    width: 50%;
-
-    font-size: 1.6rem;
+    width: 100%;
+    
+    padding: 3rem;
 
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: stretch;
     
-    text-align: justify;
-  }
-  
-  div:not(.image) {
-    z-index: 1;
-  }
-  
-  .image {
-    z-index: 0;
-    overflow: hidden;
-  }
-
-  @media (max-width: $breakpoint-tablet) { 
-    div {
-      width: 100%;
-      padding: 30px !important;
-      position: absolute;
+    font-size: 1.6rem;
+    
+    &:not(.image) {
+      z-index: 1;
     }
 
-    .image {
+    &.image {
+      z-index: 0;
+      overflow: hidden;
       opacity: .08;
+      position: absolute;
+    }
+  }
+ 
+
+  @media (min-width: $breakpoint-tablet) { 
+
+    div {
+      width: 50%;
+
+      &.image {
+        opacity: 1;
+        position: inherit;
+      }
     }
   }
 }

@@ -14,7 +14,7 @@ section.about {
   justify-content: center;
 
   hr {
-    border: .4rem solid $color-scondary;
+    border: .4rem solid $color-secondary;
     width: .4rem;
     margin: 0 auto;
     padding: 0;
@@ -25,7 +25,7 @@ section.about {
   h3 {
     padding: 0;
     padding-bottom: 1rem;
-    border-bottom: solid 1px $color-scondary;
+    border-bottom: solid 1px $color-secondary;
     margin-bottom: -.4rem;
   }
 
@@ -57,7 +57,7 @@ section.about {
       display: block;
       width: 100%;
       // padding: 1rem;
-      // border-right: solid 1px $color-scondary;
+      // border-right: solid 1px $color-secondary;
     }
 
     div:last-child {
@@ -68,7 +68,7 @@ section.about {
 
       div {
         border-right: none;
-        border-bottom: solid 1px $color-scondary;
+        border-bottom: solid 1px $color-secondary;
       }
 
       div:last-child {

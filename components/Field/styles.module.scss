@@ -3,51 +3,52 @@
 span.field {
 
   label {
-    padding-left: 1.2rem;
-    font-weight: 300;
+    width: 9rem;
+    
     display: block;
-    color: $color-scondary;
-    width: 90px;
-    border-right: 1px solid $color-scondary;
+    padding-left: 1.2rem;
+
+    position: relative;
+    
+    color: $color-secondary;
+    
+    border-right: .1rem solid $color-secondary;
+    font-weight: 300;
     z-index: 3;
   }
 
   input, textarea {
-    color:  $color-withe;
-    margin-bottom: 12px;
-    
-    padding: 10px;
     width: 100%;
+
+    padding: 1rem;
+    padding-left: 11rem;
+    margin-bottom: 1.2rem;
+    
+    color:  $color-withe;
+    
     background: none !important;
-    border: solid 1px $color-scondary;
+    border: solid .1rem $color-secondary;
+    border-radius: .4rem;
 
-    border-radius: 4px;
-
-    padding-left: 110px;
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 100rem $color-primary inset;
+    }
   }
-
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $color-primary inset;
-  }
-
   .input {
     label {
-      margin-bottom: -28px;
-    }
-  }
-  
-  .textarea {
-    
-    margin-top: 5px;
-    
-    label {
-      margin-bottom: -95px;
-      height: 86px;
-    }
-    
-    textarea {
-      height: 100px;
+      margin-bottom: -2.8rem;
     }
   }
 
+  .textarea {
+    margin-top: .5rem;
+    label {
+      height: 8.6rem;
+      
+      margin-bottom: -9.5rem;
+    }
+    textarea {
+      height: 10rem;
+    }
+  }
 }

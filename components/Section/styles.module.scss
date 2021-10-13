@@ -2,7 +2,12 @@
 
 .section {
   height: 100vh;
+  min-height: 50rem;
   width: 100%;
+  max-width: $container-max-width;
+
+  margin: 0 auto;
+  padding: 0 $container-padding 0;
 
   display: flex;
   align-items: center;
@@ -10,7 +15,7 @@
 
   div {
     height: 100vh;
-    width: 70%;
+    width: 100%;
     
     font-size: 1.6rem;
 
@@ -20,29 +25,10 @@
     
     text-align: justify;
   }
-  
-  div:not(.image) {
-    padding: 50px;
-    z-index: 1;
-  }
 
-  .image {
-    z-index: 1;
-
-    img {
-      height: 80%;
-    }
-  }
-
-  @media (max-width: $breakpoint-tablet) { 
+  @media (min-width: $breakpoint-tablet) { 
     div {
-      width: 100%;
-      padding: 30px !important;
-      position: absolute;
-    }
-
-    .image {
-      opacity: .08;
+      width: 70%;
     }
   }
 }

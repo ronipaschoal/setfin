@@ -1,13 +1,9 @@
 @import '../../styles/variables';
 
 .footer {
-  border-top: 1px solid $color-scondary;
+
   font-size: 1.6rem;
-  
-  li {
-    display: block;
-    margin: 1rem;
-  }
+  border-top: 1px solid $color-secondary;
 
   div {
     
@@ -16,29 +12,34 @@
     justify-content: center;
     
     gap: 40px;
-  }
+
+    img {
+      height: 15px !important;
+      width: 15px !important;
+
+      border-radius: 2px;
+    }
+
+    &:first-child {
+      max-width: $container-max-width;
+
+      margin: 0 auto;
+      padding: 10px $container-padding;
+      
+      color: $color-withe;
+
+      li {
+        display: block;
+        margin: 1rem;
+      }
+    }
+
+    &:last-child {
+      padding: .2rem;
   
-  div:first-child {
-    
-    max-width: $container-max-width;
-    margin: 0 auto;
-    
-    padding: 0 $container-padding 0;
-
-    padding: 10px 0;
-    color: $color-withe;
-  }
-
-  div:last-child {
-    color:#666;
-    font-size: 1.4rem;
-    padding: .2rem;
-    background: rgba($color: #000000, $alpha: .1);
-  }
-
-  img {
-    height: 15px !important;
-    width: 15px !important;
-    border-radius: 2px;
+      color:#666;
+      font-size: 1.4rem;
+      background: rgba($color: #000000, $alpha: .1);
+    }
   }
 }
