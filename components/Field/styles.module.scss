@@ -31,6 +31,7 @@ span.field {
     border-radius: .4rem;
 
     &:-webkit-autofill {
+      box-shadow: 0 0 0 100rem $color-primary inset;
       -webkit-box-shadow: 0 0 0 100rem $color-primary inset;
     }
   }

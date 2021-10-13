@@ -2,52 +2,45 @@
 
 .section {
   height: 100vh;
+  min-height: 100rem;
   width: 100%;
 
   display: flex;
   flex-direction: column;
-  align-items: start;
   text-align: center;
   justify-content: center;
 
-  @media (max-width: $breakpoint-tablet) { 
-    min-height: 1200px;
+  @media (min-width: $breakpoint-tablet) { 
+    min-height: 50rem;
   }
 
   div {
     width: 100%;
-    
+
     font-size: 1.6rem;
 
     div {
-      padding: 0 !important;
       
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      
-      
-      text-align: center;
-      row-gap: 15px;
+
+      row-gap: 1.5rem;
       
       div {
-        width: 20%;
-        // height: 20rem;
-        @media (max-width: $breakpoint-tablet) { 
-          width: 50%;
-        }
-
-        align-content: flex-start;
-        align-items: flex-start;
+        width: 50%;
+        
         justify-content: center;
+
+        @media (min-width: $breakpoint-tablet) { 
+          width: 20%;
+        }
         
         h3 {
           padding: 1rem;
           font-size: 2.2rem;
         }
-
       }
     }
   }
-
 }

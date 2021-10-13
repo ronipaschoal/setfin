@@ -1,24 +1,24 @@
 @import '../../styles/variables';
 
 .section {
-  height: 100vh;
+  min-height: 80rem;
   width: 100%;
 
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
-  // background-image: url(../../public/images/background.jpg);
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-size: cover;
+  @media (min-width: $breakpoint-tablet) { 
+    min-height: 50rem;
+  }
 
   div {
-    height: 100vh;
-    width: 50%;
+    width: 100%;
 
-    * {
-      width: 100%;
+    @media (min-width: $breakpoint-tablet) { 
+      width: 50%;
     }
 
     font-size: 1.6rem;
@@ -28,32 +28,15 @@
     flex-direction: column;
     
     text-align: justify;
-  }
-  
-  div:not(.image) {
-    padding: 50px;
-    z-index: 1;
-  }
 
-  .image {
-    z-index: 1;
-    div {
-      margin: 0 auto;
-    }
-    // img {
-    //   height: 80%;
-    // }
-  }
-
-  @media (max-width: $breakpoint-tablet) { 
-    div {
-      width: 100%;
-      padding: 30px !important;
-      position: absolute;
+    &:not(.image) {
+      padding: 5rem;
     }
 
-    .image {
-      opacity: .08;
+    &.image {
+      div {
+        margin: 0 auto;
+      }
     }
   }
 }

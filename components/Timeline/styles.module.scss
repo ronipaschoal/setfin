@@ -3,76 +3,68 @@
 section.about {
 
   height: 100vh;
+  min-height: 120rem;
+  @media (min-width: $breakpoint-tablet) { 
+    min-height: 50rem;
+  }
   width: 100%;
 
   padding: $menu-height $container-padding 0;
 
   display: flex;
   flex-direction: column;
-  align-items: start;
   text-align: center;
   justify-content: center;
 
-  hr {
-    border: .4rem solid $color-secondary;
-    width: .4rem;
-    margin: 0 auto;
-    padding: 0;
-    border-radius: 50%;
-
-  }
-  
-  h3 {
-    padding: 0;
-    padding-bottom: 1rem;
-    border-bottom: solid 1px $color-secondary;
-    margin-bottom: -.4rem;
-  }
-
-  p {
-    padding: 2rem;
-  }
-
-  @media (max-width: $breakpoint-tablet) { 
-    min-height: 1000px;
-    h2 {
-      padding-bottom: 1rem;
-    }
-
-    h3 {
-      border: none;
-      margin-top: 2rem;
-    }
-  }
-
   div {
-    display: flex;
-    flex-direction: row;
+    
+    margin-bottom: 5rem;
 
-    @media (max-width: $breakpoint-tablet) { 
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint-tablet) { 
+      flex-direction: row;
     }
 
     div {
-      display: block;
-      width: 100%;
-      // padding: 1rem;
-      // border-right: solid 1px $color-secondary;
-    }
-
-    div:last-child {
       border-right: none;
+      border-bottom: solid .1rem $color-secondary;
+
+      hr {
+        width: .4rem;
+        
+        padding: 0;
+        margin: 0 auto;
+
+        border: .4rem solid $color-secondary;
+        border-radius: 50%;
+      }
+    
+      h3 {
+        padding-bottom: 1rem;
+
+        @media (min-width: $breakpoint-tablet) { 
+          border-bottom: solid .1rem $color-secondary;
+          margin-bottom: -.4rem;
+        }
+      }
+    
+      p {
+        padding: 2rem;
+      }
     }
 
-    @media (max-width: $breakpoint-tablet) { 
-
+    &:last-child {
+      border-bottom: none;
+      margin: 0;
+    }
+    
+    @media (min-width: $breakpoint-tablet) { 
       div {
-        border-right: none;
-        border-bottom: solid 1px $color-secondary;
-      }
-
-      div:last-child {
-        border-bottom: none;
+        display: block;
+        width: 100%;
+        border: none;
       }
     }
   }
