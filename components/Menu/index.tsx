@@ -52,9 +52,9 @@ const Menu: NextPage = () => {
       <nav className={styles.navbar}>
 
         <div className={styles.logo}>
-          <a href={`#${menu[languageActive].section}`} 
+          <a href={`#${menu[0].section}`} 
             className={styles.navLogo} 
-            onClick={ () => selectMenu(menu[languageActive].section) }>
+            onClick={ () => selectMenu(menu[0].section) }>
 
             <Image src={logo.src}
               alt={logo.alt}
