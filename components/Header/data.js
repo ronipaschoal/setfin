@@ -8,6 +8,8 @@ export const data = {
     './font/nasalization-rg.otf',
     './font/aroma-light.ttf',
     './font/dekar-light.otf',
-    './font/roboto-thin.ttf'
+    './font/roboto-thin.ttf',
+    './font/ubuntu-light.ttf',
+    './font/ubuntu-medium.ttf'
   ]
 }

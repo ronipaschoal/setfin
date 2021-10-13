@@ -2,7 +2,7 @@
 @import 'variables';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu-Light', sans-serif;
   word-spacing: .5rem;
   font-size: 1.6rem;
   color:  $color-withe;
@@ -17,11 +17,11 @@ h1, h2, h3 {
   font-weight: 100;
   width: 100%;
   display: block;
-  font-family: 'Nasalization-Rg', sans-serif;
+  font-family: 'Ubuntu-Light', sans-serif;
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 7rem;
   @media (max-width: $breakpoint-tablet) { 
     font-size: 5rem;
   }

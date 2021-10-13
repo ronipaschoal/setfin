@@ -29,10 +29,13 @@
     }
 
     &.image {
-      z-index: 0;
-      overflow: hidden;
-      opacity: .08;
       position: absolute;
+      
+      padding: 0;
+
+      overflow: hidden;
+      z-index: 0;
+      opacity: .08;
     }
   }
  
@@ -43,6 +46,7 @@
       width: 50%;
 
       &.image {
+        overflow: inherit;
         opacity: 1;
         position: inherit;
       }

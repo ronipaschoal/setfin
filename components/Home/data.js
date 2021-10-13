@@ -9,8 +9,8 @@ export const dataArray = [
       width: 576
     },
     title: [
-      'SetFin Tecnologia', 
-      'SetFin Technology'
+      'Setfin Tecnologia', 
+      'Setfin Technology'
     ],
     content: [
       'Aceleradora de processos contábeis, financeiros e administrativos.',

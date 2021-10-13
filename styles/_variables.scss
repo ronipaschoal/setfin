@@ -18,10 +18,20 @@
   src: url(../public/font/roboto-thin.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Ubuntu-Light";
+  src: url(../public/font/ubuntu-light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url(../public/font/ubuntu-medium.ttf) format("truetype");
+}
+
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 800px;
 
-$color-withe: #ddd;
+$color-withe: #fff;
 $color-primary: #00678A;
 $color-secondary: #00ebeb;
 $color-secondary-opacity: #2799DB11;
