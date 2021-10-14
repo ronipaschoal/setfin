@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { Fragment, useContext } from 'react';
+import { useContext } from 'react';
 
 import styles from './styles.module.scss';
 

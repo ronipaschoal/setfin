@@ -14,13 +14,7 @@ const Contact: NextPage = () => {
   const { languageActive } = useContext(LanguageContext);
   const { id, fields, title, status, submit } = data;
 
-  const newMessage = {
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: ""
-  }
+  const newMessage = Object.fromEntries(data.fields.map(field => ([field.name, ""])));
 
   const [fieldState, setFieldState] = useState(newMessage);
   const [formStatus, setFormStatus] = useState('');
@@ -29,34 +23,42 @@ const Contact: NextPage = () => {
 
     e.preventDefault();
     
-    var param = '';
-    Object.entries(fieldState).map((value:Array<string>,index:number) => {
-      param += value[0] + '=' + value[1];
-      param += '&'
+    const param = Object.entries(fieldState).map( (value:Array<string>, index:number) => {
+
+      if(value[1] === '') { 
+        setFormStatus(status.required[languageActive]);
+        return 'formError';
+      }
+      return `${value[0]}=${escape(value[1])}&`;
+
     });
 
-    const service = 'https://fiversystem.com/setfin/mail.php?';
-    const API_PATH = `${service}${param.substring(0, param.length - 1)}`;    
-    const requestOptions = { method: 'get' };
+    if (param.indexOf('formError') === -1) {
+      
+      const service = 'https://fiversystem.com/setfin/mail.php?';
+      const API_PATH = `${service}${param.join('')}`;    
+      const requestOptions = { method: 'get' };
 
-    setFormStatus(status.progress[languageActive]);
+      console.log('formStatus');
+      setFormStatus(status.progress[languageActive]);
 
-    const response = await fetch(API_PATH, requestOptions)
-      .then(response => response.json())
-      .then(data => data)
-      .catch(error => error);
+      const response = await fetch(API_PATH, requestOptions)
+        .then(response => response.json())
+        .then(data => {
 
-    setTimeout(
-      function() {
-        if(response.success === true) {
-          setFormStatus(status.success[languageActive]);
-          setFieldState(newMessage);
-        } else {
-          setFormStatus(status.error[languageActive]);
-        }
-      }.bind(this),
-      3000
-    );
+          if(data.success === undefined) {
+            throw Error('undefined'); 
+          } else if(data.success === false) {
+            setFormStatus(status.required[languageActive]);
+          } else {
+            setFormStatus(status.success[languageActive]);
+            setFieldState(newMessage);
+          }
+        })
+        .catch(error => setFormStatus(status.error[languageActive]));
+    }
+
+    setTimeout(function() { setFormStatus('') }, 3000);
   }
 
   return (

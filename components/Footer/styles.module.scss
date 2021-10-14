@@ -7,6 +7,11 @@
 
   div {
     
+    font-family: 'Dekar-Light', sans-serif;
+    letter-spacing: .3rem;
+
+    color: $color-withe;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,8 +30,9 @@
 
       margin: 0 auto;
       padding: 10px $container-padding;
+
+      opacity: .8;
       
-      color: #ddd;
       li {
         display: block;
         margin: 1rem;
@@ -34,11 +40,13 @@
     }
 
     &:last-child {
+
       padding: .2rem;
+      font-size: 1.2rem;
   
-      color:#666;
-      font-size: 1.4rem;
-      background: rgba($color: #000000, $alpha: .1);
+      opacity: .4;
+
+      background: rgba($color: #000000, $alpha: .3);
     }
   }
 }

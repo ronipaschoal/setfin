@@ -34,7 +34,7 @@ header.header {
 
       display: block;
       margin: 5px auto;
-      background-color: #fff;
+      background-color: $color-withe;
       
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
@@ -71,7 +71,7 @@ header.header {
 
         &.active, &:hover:not(.active) {
 
-          border-bottom: #fff .2rem solid;
+          border-bottom: $color-withe .2rem solid;
           a {
             opacity: 1;
           }
@@ -82,7 +82,7 @@ header.header {
           width: 100%;
 
           font-size: 1.6rem;
-          color: #fff;
+          color: $color-withe;
 
           text-transform: capitalize;
           font-weight: 300;
@@ -152,7 +152,7 @@ header.header {
             border-top: none;
 
             .language {
-              border-left: solid 1px #fff;
+              border-left: solid 1px $color-withe;
               padding-left: 3rem;
             }
           }

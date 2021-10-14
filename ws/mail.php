@@ -49,7 +49,7 @@ if (!empty($contact)) {
 			// Always set content-type when sending HTML email
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= "From: ronnin-rj@hotmail.com";
+			$headers .= "From: contato@fiversystem.com";
 
 			if(mail($to, $subject, $msg, $headers)) {
 				$data['success'] = true;
