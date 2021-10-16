@@ -8,54 +8,62 @@ import FormContext from '../../contexts/FormContext';
 
 interface field {
   data: {
-    name: string,
-    label: Array<string>,
-    placeholder:  Array<string>,
-    type: string
-  }
+    name: string;
+    label: Array<string>;
+    placeholder: Array<string>;
+    type: string;
+  };
 }
 
 const Field: NextPage<field> = ({ data }) => {
-  
-  const formContext = useContext(FormContext);
+  const { fieldState, setFieldState } = useContext(FormContext);
   const { languageActive } = useContext(LanguageContext);
   const { name, label, type, placeholder } = data;
 
-  function handleChange(evt: any) {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    fillFieldState(event.target.name, event.target.value);
+  };
 
-    const value = evt.target.value;
-    formContext.setFieldState({
-      ...formContext.fieldState,
-      [evt.target.name]: value
+  const handleTextAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    fillFieldState(event.target.name, event.target.value);
+  };
+
+  const fillFieldState = (name: string, value: string) => {
+    setFieldState({
+      ...fieldState,
+      [name]: value,
     });
-  }
+  };
 
   return (
     <span className={styles.field}>
-      { type == "input" &&
+      {type == 'input' && (
         <div className={styles.input}>
-          <label htmlFor={name}>{ label[languageActive] }</label>
-          <input type="text"
+          <label htmlFor={name}>{label[languageActive]}</label>
+          <input
+            type="text"
             name={name}
             id={name}
-            value={formContext.fieldState[name]}
-            onChange={handleChange}
-            placeholder={ placeholder[languageActive] } />
+            value={fieldState[name]}
+            onChange={handleInputChange}
+            placeholder={placeholder[languageActive]}
+          />
         </div>
-      }
-      { type == "textarea" &&
+      )}
+      {type == 'textarea' && (
         <div className={styles.textarea}>
-          <label htmlFor={name}>{ label[languageActive] }</label>
+          <label htmlFor={name}>{label[languageActive]}</label>
           <textarea
             name={name}
             id={name}
-            value={formContext.fieldState[name]}
-            onChange={handleChange}
-            placeholder={ placeholder[languageActive] } />
+            value={fieldState[name]}
+            onChange={handleTextAreaChange}
+            placeholder={placeholder[languageActive]}
+          />
         </div>
-      }
-  </span>
+      )}
+    </span>
   );
-}
+};
 
 export default Field;

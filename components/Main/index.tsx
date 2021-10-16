@@ -9,7 +9,6 @@ import Timeline from '../Timeline';
 import Contact from '../Contact';
 
 const Main: NextPage = () => {
-
   return (
     <main>
       <Menu />
@@ -21,6 +20,6 @@ const Main: NextPage = () => {
       <Contact />
     </main>
   );
-}
+};
 
 export default Main;

@@ -8,16 +8,15 @@ import Footer from '../components/Footer';
 import LanguageContext from '../contexts/LanguageContext';
 
 const App: NextPage = () => {
-
   const [languageActive, setLanguageActive] = useState(0);
 
   return (
-    <LanguageContext.Provider value={{languageActive, setLanguageActive }} >
+    <LanguageContext.Provider value={{ languageActive, setLanguageActive }}>
       <Header />
       <Main />
       <Footer />
     </LanguageContext.Provider>
-  )
-}
+  );
+};
 
 export default App;

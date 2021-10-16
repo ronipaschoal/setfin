@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { useContext } from 'react';
 import Image from 'next/image';
 
-import {dataArray} from './data.js';
+import { dataArray } from './data.js';
 
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
@@ -12,30 +12,26 @@ interface Props {
 }
 
 const SectionIcons: NextPage<Props> = ({ index }) => {
-
   const { languageActive } = useContext(LanguageContext);
   const { id, title, content } = dataArray[index];
-  
-  return (
-    <section id={id}
-      className={styles.section}>
 
+  return (
+    <section id={id} className={styles.section}>
       <div>
         <h2>{title[languageActive]}</h2>
         <div>
-          { content.map((content, index) => {
-          return(
-            <div key={index}>
-              <Image src={content.image} height="60px" width="60px" layout="fixed" />
-              <h3>{content.title[languageActive]}</h3>
-            </div>
-          );
-        })}
+          {content.map((content, index) => {
+            return (
+              <div key={index}>
+                <Image src={content.image} height="60px" width="60px" layout="fixed" />
+                <h3>{content.title[languageActive]}</h3>
+              </div>
+            );
+          })}
         </div>
       </div>
-      
     </section>
   );
-}
+};
 
 export default SectionIcons;

@@ -6,15 +6,12 @@ export const dataArray = [
       src: '/images/home.png',
       alt: 'SetFin Logo',
       height: 472,
-      width: 576
+      width: 576,
     },
-    title: [
-      'Setfin Tecnologia', 
-      'Setfin Technology'
-    ],
+    title: ['Setfin Tecnologia', 'Setfin Technology'],
     content: [
       'Aceleradora de processos contábeis, financeiros e administrativos.',
-      'Accelerator of accounting, financial and administrative processes.'
-    ]
-  }
-]
+      'Accelerator of accounting, financial and administrative processes.',
+    ],
+  },
+];
