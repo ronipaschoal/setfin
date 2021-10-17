@@ -1,6 +1,7 @@
 export const dataArray = [
   {
     id: 'home',
+    section: 'home',
     position: 'left',
     image: {
       src: '/images/home.png',

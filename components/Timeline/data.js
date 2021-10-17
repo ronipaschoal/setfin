@@ -1,5 +1,6 @@
 export const data = {
   id: 'process',
+  section: 'process',
   title: ['Nosso Processo', 'Our Process'],
   contents: [
     {

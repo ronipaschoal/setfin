@@ -51,4 +51,10 @@ p {
 section {
   max-width: $container-max-width;
   margin: 0 auto;
+  opacity: .3;
+  transition: all .5s;
+}
+
+section.active {
+  opacity: 1;
 }

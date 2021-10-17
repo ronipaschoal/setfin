@@ -8,10 +8,12 @@ import Field from '../Field/Index';
 
 import LanguageContext from '../../contexts/LanguageContext';
 import FormContext from '../../contexts/FormContext';
+import ActiveSectionContext from '../../contexts/ActiveSectionContext';
 
 const Contact: NextPage = () => {
   const { languageActive } = useContext(LanguageContext);
-  const { id, fields, title, status, submit, serviceUrl } = data;
+  const { activeSection } = useContext(ActiveSectionContext);
+  const { id, section, fields, title, status, submit, serviceUrl } = data;
 
   const newMessage = Object.fromEntries(data.fields.map((field) => [field.name, '']));
 
@@ -57,7 +59,10 @@ const Contact: NextPage = () => {
 
   return (
     <FormContext.Provider value={{ fieldState, setFieldState }}>
-      <section id={id} className={styles.contact}>
+      <section
+        id={id}
+        className={activeSection === section ? `${styles.contact} active` : styles.contact}
+      >
         <form onSubmit={(e) => handleSubmit(e)}>
           <h2>{title[languageActive]}</h2>
           <p>{formStatus}</p>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
+import ActiveSectionContext from '../../contexts/ActiveSectionContext';
 
 import { dataArray } from './data.js';
 
@@ -13,12 +14,13 @@ interface Props {
 
 const SectionTwoParty: NextPage<Props> = ({ index }) => {
   const language = useContext(LanguageContext).languageActive;
-  const { id, position, image, title, content } = dataArray[index];
+  const { activeSection } = useContext(ActiveSectionContext);
+  const { id, section, position, image, title, content } = dataArray[index];
 
   return (
     <section
       id={id}
-      className={styles.section}
+      className={activeSection === section ? `${styles.section} active` : styles.section}
       style={{
         flexDirection: position == 'left' ? 'row-reverse' : 'row',
       }}

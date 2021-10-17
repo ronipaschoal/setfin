@@ -6,6 +6,7 @@ import { data } from './data.js';
 
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
+import ActiveSectionContext from '../../contexts/ActiveSectionContext';
 
 interface Menu {
   section: string;
@@ -14,23 +15,25 @@ interface Menu {
 
 const Menu: NextPage = () => {
   const { languageActive, setLanguageActive } = useContext(LanguageContext);
+  const { setActiveSection } = useContext(ActiveSectionContext);
   const { id, menu, logo, language } = data;
 
-  const [activeMenu, setActiveMenu] = useState(menu[0].section);
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [navMenuActive, setNavMenuActive] = useState(false);
+  const [navMenuItemActive, setNavMenuItemActive] = useState(menu[0].section);
 
   useEffect(() => {
     window.addEventListener('scroll', listenToScroll);
   }, []);
 
-  function selectMenu(menu: string) {
-    setActiveMenu(menu);
+  const selectMenu = (menu: string) => {
+    setActiveSection(menu);
     setHamburgerActive(false);
     setNavMenuActive(false);
-  }
+    console.log();
+  };
 
-  function listenToScroll() {
+  const listenToScroll = () => {
     menu.forEach(function (menu: Menu) {
       const menuItem = document.querySelector(`#${menu.section}`);
       if (menuItem == null) {
@@ -39,10 +42,15 @@ const Menu: NextPage = () => {
 
       const position = menuItem.getBoundingClientRect();
       if (position.top < 1 && position.bottom > 1) {
-        setActiveMenu(menu.section);
+        setNavMenuItemActive(menu.section);
+      }
+      if (position.top < 300 && position.bottom > 1) {
+        console.log(menu.section, position.top);
+        console.log(menu.section, position.bottom);
+        setActiveSection(menu.section);
       }
     });
-  }
+  };
 
   return (
     <header id={id} className={styles.header}>
@@ -66,14 +74,8 @@ const Menu: NextPage = () => {
         <ul className={navMenuActive ? styles.active : ''}>
           {menu.map((menu, index) => {
             return (
-              <li
-                key={index}
-                className={activeMenu == menu.section ? styles.active : ''}
-              >
-                <a
-                  href={`#${menu.section}`}
-                  onClick={() => selectMenu(menu.section)}
-                >
+              <li key={index} className={navMenuItemActive == menu.section ? styles.active : ''}>
+                <a href={`#${menu.section}`} onClick={() => selectMenu(menu.section)}>
                   {menu.title[languageActive]}
                 </a>
               </li>
@@ -92,11 +94,7 @@ const Menu: NextPage = () => {
         </ul>
 
         <div
-          className={
-            hamburgerActive
-              ? `${styles.active} ${styles.hamburger}`
-              : styles.hamburger
-          }
+          className={hamburgerActive ? `${styles.active} ${styles.hamburger}` : styles.hamburger}
           onClick={() => {
             setHamburgerActive(!hamburgerActive);
             setNavMenuActive(!navMenuActive);

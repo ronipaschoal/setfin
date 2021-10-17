@@ -1,7 +1,7 @@
 export const dataArray = [
   {
     id: 'features',
-    background: '',
+    section: 'features',
     title: ['O Que Fazemos', 'What We Do'],
     content: [
       {

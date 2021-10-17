@@ -13,12 +13,13 @@ interface Props {
 
 const Home: NextPage<Props> = ({ index }) => {
   const { languageActive } = useContext(LanguageContext);
+
   const { id, position, image, title, content } = dataArray[index];
 
   return (
     <section
       id={id}
-      className={styles.section}
+      className={`${styles.section} active`}
       style={{
         flexDirection: position == 'left' ? 'row-reverse' : 'row',
       }}

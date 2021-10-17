@@ -1,5 +1,6 @@
 export const data = {
   id: 'contact',
+  section: 'contact',
   title: ['Fale Conosco!', 'Contact Us!'],
   fields: [
     {
