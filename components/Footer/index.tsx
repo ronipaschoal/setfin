@@ -7,7 +7,6 @@ import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
 
 const Footer: NextPage = () => {
-
   const { languageActive } = useContext(LanguageContext);
   const { contact, designBy } = data;
 
@@ -23,28 +22,24 @@ const Footer: NextPage = () => {
         </a> */}
         <ul>
           <li>
-            <a
-              href={ 'tel:' + contact.tel.number }
-              target="_blank"
-              rel="noreferrer">
-                { contact.tel.text[languageActive] }
+            <a href={'tel:' + contact.tel.number} target="_blank" rel="noreferrer">
+              {contact.tel.text[languageActive]}
             </a>
           </li>
           <li>
-            <a
-              href={ 'mailto:' + contact.email.email }
-              target="_blank"
-              rel="noreferrer">
-                { contact.email.text[languageActive] }
+            <a href={'mailto:' + contact.email.email} target="_blank" rel="noreferrer">
+              {contact.email.text[languageActive]}
             </a>
           </li>
         </ul>
       </div>
       <div>
-        <a href={ designBy.link } target="_blank" rel="noreferrer">{ designBy.text }</a>
+        <a href={designBy.link} target="_blank" rel="noreferrer">
+          {designBy.text}
+        </a>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -16,10 +16,7 @@ export const data = {
     },
     email: {
       email: 'commercial@setfin.com.br',
-      text: [
-        'E-mail: commercial@setfin.com.br',
-        'Email: commercial@setfin.com.br',
-      ],
+      text: ['E-mail: commercial@setfin.com.br', 'Email: commercial@setfin.com.br'],
     },
   },
   designBy: {
