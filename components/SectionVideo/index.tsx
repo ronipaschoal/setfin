@@ -30,10 +30,10 @@ const SectionVideo: NextPage<Props> = ({ index }) => {
         </video>
       </div>
 
-      <div>
+      {/* <div>
         <h3>{title[language]}</h3>
         <p>{content[language]}</p>
-      </div>
+      </div> */}
     </section>
   );
 };

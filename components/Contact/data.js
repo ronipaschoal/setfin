@@ -38,8 +38,8 @@ export const data = {
     success: ['Email enviado com sucesso!', 'Email successfully sent!'],
     required: ['Favor preencher todos os campos.', 'Please fill in all fields.'],
     error: [
-      'Houve um erro ao enviar o e-mail, por gentileza entre em contato atráves do e-mail commercial@setfin.com.br.',
-      'There was an error sending the email, please contact us at commercial@setfin.com.br.',
+      'Houve um erro ao enviar o e-mail, por gentileza entre em contato atráves do e-mail comercial@setfin.com.br.',
+      'There was an error sending the email, please contact us at comercial@setfin.com.br.',
     ],
     progress: ['Enviando o email...', 'Sending the email...'],
   },

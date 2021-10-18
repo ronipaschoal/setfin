@@ -5,15 +5,14 @@ body {
   font-family: 'Ubuntu-Light', sans-serif;
   word-spacing: .5rem;
   font-size: 1.6rem;
-  color: $color-withe;
+  color: $color-text;
   font-weight: 600;
   
   background: $color-background;
-  background: $color-background-gradient;
 }
 
 h1, h2, h3 {
-  color: $color-secondary;
+  color: $color-primary;
   font-weight: 100;
   width: 100%;
   display: block;
@@ -39,6 +38,7 @@ h2 {
 
 h3 {
   font-size: 4rem;
+  font-weight: bold;
   padding-bottom: 1em;
   text-align: center;
   font-family: 'Dekar-Light', sans-serif;

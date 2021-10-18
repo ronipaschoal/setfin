@@ -1,7 +1,7 @@
 export const data = {
   id: 'header',
   logo: {
-    src: '/images/setfin-logo.png',
+    src: '/images/setfin-logo-color.png',
     alt: 'SetFin Logo',
     width: 61,
     height: 50,

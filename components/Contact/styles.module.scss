@@ -37,7 +37,7 @@ section.contact {
 
       color: $color-secondary;
       
-      background: none !important;
+      background: $color-background-field;
       border: solid .1rem $color-secondary;
       
       border-radius: .4rem;

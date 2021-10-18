@@ -24,9 +24,9 @@ span.field {
     padding-left: 11rem;
     margin-bottom: 1.2rem;
     
-    color:  $color-withe;
+    color: $color-text;
     
-    background: none !important;
+    background: $color-background-field;
     border: solid .1rem $color-secondary;
     border-radius: .4rem;
 
