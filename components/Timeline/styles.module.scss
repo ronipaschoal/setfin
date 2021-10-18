@@ -2,7 +2,7 @@
 
 section.about {
 
-  height: 100vh;
+  height: 60vh;
   min-height: 120rem;
   @media (min-width: $breakpoint-tablet) { 
     min-height: 50rem;
@@ -42,7 +42,7 @@ section.about {
       }
     
       h3 {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
 
         @media (min-width: $breakpoint-tablet) { 
           border-bottom: solid .1rem $color-secondary;

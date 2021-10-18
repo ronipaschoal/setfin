@@ -1,7 +1,6 @@
 @import '../../styles/variables';
 
 .section {
-  min-height: 80rem;
   width: 100%;
 
   display: flex;
@@ -9,10 +8,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
-  @media (min-width: $breakpoint-tablet) { 
-    min-height: 50rem;
-  }
 
   div {
     width: 100%;
@@ -29,14 +24,6 @@
     
     text-align: justify;
 
-    &:not(.image) {
-      padding: 5rem;
-    }
-
-    &.image {
-      div {
-        margin: 0 auto;
-      }
-    }
+    padding: 1rem;
   }
 }

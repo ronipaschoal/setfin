@@ -10,6 +10,7 @@ header.header {
   z-index: 10;
   
   background: $color-background;
+  box-shadow: 1px 2px 2px #bfc6c9;
 
   nav.navbar {
     
@@ -86,7 +87,6 @@ header.header {
           text-transform: capitalize;
           font-weight: 300;
           opacity: .6;
-          font-family: 'Dekar-Light', sans-serif;
           letter-spacing: .3rem;
           
           cursor: pointer;

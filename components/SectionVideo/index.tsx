@@ -2,7 +2,6 @@ import { NextPage } from 'next';
 import { useContext } from 'react';
 
 import styles from './styles.module.scss';
-import LanguageContext from '../../contexts/LanguageContext';
 import ActiveSectionContext from '../../contexts/ActiveSectionContext';
 
 import { dataArray } from './data.js';
@@ -12,9 +11,8 @@ interface Props {
 }
 
 const SectionVideo: NextPage<Props> = ({ index }) => {
-  const language = useContext(LanguageContext).languageActive;
   const { activeSection } = useContext(ActiveSectionContext);
-  const { id, section, video, title, content, position } = dataArray[index];
+  const { id, section, video, position } = dataArray[index];
 
   return (
     <section
