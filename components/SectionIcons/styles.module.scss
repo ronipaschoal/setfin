@@ -1,14 +1,15 @@
 @import '../../styles/variables';
 
 .section {
-  height: 100vh;
-  min-height: 100rem;
+  min-height: 100vh;
   width: 100%;
 
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+
+  padding: $menu-height $container-padding;
 
   @media (min-width: $breakpoint-tablet) { 
     min-height: 50rem;

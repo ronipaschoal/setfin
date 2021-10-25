@@ -1,20 +1,19 @@
 @import '../../styles/variables';
 
 .section {
-  height: 100vh;
-  min-height: 50rem;
+  // min-height: 100vh;
   width: 100%;
   max-width: $container-max-width;
 
   margin: 0 auto;
-  padding: 0 $container-padding 0;
+  padding: $menu-height $container-padding;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   div {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     
     font-size: 1.6rem;

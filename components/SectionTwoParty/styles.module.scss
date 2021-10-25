@@ -1,8 +1,10 @@
 @import '../../styles/variables';
 
 .section {
-  min-height: 80rem;
+  // min-height: 80rem;
   width: 100%;
+
+  padding: $menu-height $container-padding;
 
   display: flex;
   flex-direction: row;

@@ -2,18 +2,19 @@
 
 section.contact {
 
-  height: 100vh;
-  min-height: 60rem;
-
+  min-height: 100vh;
+  
   display: flex;
 
   align-items: center;
   align-content: center;
 
+
+  padding: $menu-height $container-padding;
+  
   form {
 
     width: 100%;
-    padding: $menu-height $container-padding 0;
 
     font-size: 1.6rem;
     

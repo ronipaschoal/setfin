@@ -1,7 +1,10 @@
 @import '../../styles/variables';
 
 .section {
+  
   width: 100%;
+  
+  padding: $menu-height $container-padding;
 
   display: flex;
   flex-direction: row;

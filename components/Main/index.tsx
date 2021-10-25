@@ -6,7 +6,7 @@ import SectionTwoParty from '../SectionTwoParty';
 import SectionVideo from '../SectionVideo';
 import Section from '../Section';
 import SectionIcons from '../SectionIcons';
-import Timeline from '../Timeline';
+import Process from '../Process';
 import Contact from '../Contact';
 
 const Main: NextPage = () => {
@@ -18,7 +18,7 @@ const Main: NextPage = () => {
       <SectionTwoParty index={0} />
       <SectionVideo index={0} />
       <SectionIcons index={0} />
-      <Timeline />
+      <Process />
       <Contact />
     </main>
   );

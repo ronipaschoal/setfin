@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
 import ActiveSectionContext from '../../contexts/ActiveSectionContext';
 
-const Timeline: NextPage = () => {
+const Process: NextPage = () => {
   const { languageActive } = useContext(LanguageContext);
   const { activeSection } = useContext(ActiveSectionContext);
   const { id, section, title, contents } = data;
@@ -32,4 +32,4 @@ const Timeline: NextPage = () => {
   );
 };
 
-export default Timeline;
+export default Process;
