@@ -2,6 +2,19 @@
 
 span.field {
 
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #bbb;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #bbb;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #bbb;
+  }
+
   label {
     width: 9rem;
     
@@ -10,9 +23,9 @@ span.field {
 
     position: relative;
     
-    color: $color-secondary;
+    color: $color-withe;
     
-    border-right: .1rem solid $color-secondary;
+    border-right: .1rem solid $color-withe;
     font-weight: 300;
     z-index: 3;
   }
@@ -24,10 +37,10 @@ span.field {
     padding-left: 11rem;
     margin-bottom: 1.2rem;
     
-    color: $color-text;
+    color: $color-withe;
     
     background: $color-background-field;
-    border: solid .1rem $color-secondary;
+    border: solid .1rem $color-withe;
     border-radius: .4rem;
 
     &:-webkit-autofill {

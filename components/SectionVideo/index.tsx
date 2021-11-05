@@ -3,6 +3,7 @@ import { useContext } from 'react';
 
 import styles from './styles.module.scss';
 import ActiveSectionContext from '../../contexts/ActiveSectionContext';
+import LanguageContext from '../../contexts/LanguageContext';
 
 import { dataArray } from './data.js';
 
@@ -11,8 +12,9 @@ interface Props {
 }
 
 const SectionVideo: NextPage<Props> = ({ index }) => {
+  const { languageActive } = useContext(LanguageContext);
   const { activeSection } = useContext(ActiveSectionContext);
-  const { id, section, video, position } = dataArray[index];
+  const { id, section, video, position, title, content } = dataArray[index];
 
   return (
     <section
@@ -22,16 +24,16 @@ const SectionVideo: NextPage<Props> = ({ index }) => {
         flexDirection: position == 'left' ? 'row-reverse' : 'row',
       }}
     >
-      <div className={`${styles.video} image`}>
+      <div className={`${styles.video} video`}>
         <video controls style={{ width: '100%', height: 'auto' }}>
           <source src={video.src} />
         </video>
       </div>
 
-      {/* <div>
-        <h3>{title[language]}</h3>
-        <p>{content[language]}</p>
-      </div> */}
+      <div>
+        <h3>{title[languageActive]}</h3>
+        <p>{content[languageActive]}</p>
+      </div>
     </section>
   );
 };

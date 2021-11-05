@@ -9,10 +9,16 @@ section.contact {
   align-items: center;
   align-content: center;
 
+  background: $color-primary;
+  border-bottom: 2px solid #a2a2a2;
 
-  padding: $menu-height $container-padding;
+  max-width: none;
   
   form {
+
+    margin: 0 auto;
+    max-width: $container-max-width;
+    padding: $menu-height $container-padding;
 
     width: 100%;
 
@@ -28,6 +34,7 @@ section.contact {
     }
 
     p {
+      color: $color-withe;
       text-align: center;
       padding-bottom: 10px;
     }
@@ -36,15 +43,19 @@ section.contact {
       padding: 1rem;
       width: 100%;
 
-      color: $color-secondary;
+      color: $color-withe;
       
       background: $color-background-field;
-      border: solid .1rem $color-secondary;
+      border: solid .1rem $color-withe;
       
       border-radius: .4rem;
       float: right;
       
       text-transform: uppercase;
+    }
+
+    h2 {
+      color: $color-withe;
     }
   }
 

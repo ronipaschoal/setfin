@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
+  
   div {
     width: 100%;
 
@@ -27,6 +27,10 @@
     
     text-align: justify;
 
+    padding: 5rem;
+  }
+
+  .video {
     padding: 1rem;
   }
 }
