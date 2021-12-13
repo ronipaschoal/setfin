@@ -6,10 +6,8 @@ export const data = {
     height: 45,
   },
   menu: [
-    { section: 'home', title: ['Home', 'Home'] },
     { section: 'about', title: ['Setfin', 'Setfin'] },
-    { section: 'features', title: ['Portfólio', 'Portfólio'] },
-    // { section: 'process', title: ['Nosso Processo', 'Our Process'] },
+    { section: 'features', title: ['Portfólio', 'Portfolio'] },
     { section: 'contact', title: ['Contato', 'Contact Us'] },
   ],
   language: ['pt', 'en'],
