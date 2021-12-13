@@ -1,14 +1,11 @@
-import type { NextPage } from 'next';
 import { useState } from 'react';
-
-import Header from '../components/Header';
-import Main from '../components/Main';
-import Footer from '../components/Footer';
-
+import Header from '../template/Header';
+import Main from '../template/Main';
+import Footer from '../template/Footer';
 import LanguageContext from '../contexts/LanguageContext';
 import ActiveSectionContex from '../contexts/ActiveSectionContext';
 
-const App: NextPage = () => {
+export default function Home() {
   const [languageActive, setLanguageActive] = useState(0);
   const [activeSection, setActiveSection] = useState(['home']);
 
@@ -20,7 +17,5 @@ const App: NextPage = () => {
         <Footer />
       </ActiveSectionContex.Provider>
     </LanguageContext.Provider>
-  );
-};
-
-export default App;
+  )
+}

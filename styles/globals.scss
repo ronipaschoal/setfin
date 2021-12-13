@@ -1,58 +1,22 @@
-@import 'reset';
-@import 'variables';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-body {
-  font-family: 'Ubuntu-Light', sans-serif;
-  word-spacing: .5rem;
-  font-size: 1.6rem;
-  color: $color-text;
-  font-weight: 600;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
   
-  background: $color-background;
-}
-
-h1, h2, h3 {
-  color: $color-primary;
-  font-weight: 100;
-  width: 100%;
-  display: block;
   font-family: 'Ubuntu-Light', sans-serif;
 }
 
-h1 {
-  font-size: 7rem;
-  @media (max-width: $breakpoint-tablet) { 
-    font-size: 5rem;
-  }
-  padding-bottom: 4rem;
+li {
+  list-style: none;
+  display: inline;
 }
 
-h2 {
-  font-size: 5rem;
-  text-align: center;
-  @media (max-width: $breakpoint-tablet) { 
-    font-size: 4rem;
-  }
-  padding-bottom: 5rem;
-}
-
-h3 {
-  font-size: 3rem;
-  padding-bottom: 1em;
-  text-align: center;
-}
-
-p {
-  line-height: 2.5rem;
-}
-
-section {
-  max-width: $container-max-width;
-  margin: 0 auto;
-  opacity: .3;
-  transition: all .5s;
-}
-
-section.active {
-  opacity: 1;
+a {
+  color: inherit;
+  text-decoration: none;
 }

@@ -16,7 +16,7 @@ interface Menu {
 const Menu: NextPage = () => {
   const { languageActive, setLanguageActive } = useContext(LanguageContext);
   const { setActiveSection } = useContext(ActiveSectionContext);
-  const { id, menu, logo, language } = data;
+  const { menu, logo, language } = data;
 
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [navMenuActive, setNavMenuActive] = useState(false);
@@ -30,7 +30,6 @@ const Menu: NextPage = () => {
     setActiveSection(menu);
     setHamburgerActive(false);
     setNavMenuActive(false);
-    console.log();
   };
 
   const listenToScroll = () => {
@@ -45,67 +44,67 @@ const Menu: NextPage = () => {
         setNavMenuItemActive(menu.section);
       }
       if (position.top < 300 && position.bottom > 1) {
-        console.log(menu.section, position.top);
-        console.log(menu.section, position.bottom);
         setActiveSection(menu.section);
       }
     });
   };
 
   return (
-    <header id={id} className={styles.header}>
-      <nav className={styles.navbar}>
-        <div className={styles.logo}>
-          <a
-            href={`#${menu[0].section}`}
-            className={styles.navLogo}
-            onClick={() => selectMenu(menu[0].section)}
-          >
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={logo.width}
-              height={logo.height}
-              layout="fixed"
-            />
-          </a>
-        </div>
-
-        <ul className={navMenuActive ? styles.active : ''}>
-          {menu.map((menu, index) => {
-            return (
-              <li key={index} className={navMenuItemActive == menu.section ? styles.active : ''}>
-                <a href={`#${menu.section}`} onClick={() => selectMenu(menu.section)}>
-                  {menu.title[languageActive]}
-                </a>
-              </li>
-            );
-          })}
-          <li className={styles.navItem}>
+    <>
+      <header id='header' className={styles.header}>
+        <nav className={styles.navbar}>
+          <div className={styles.logo}>
             <a
-              className={styles.language}
-              onClick={() => {
-                setLanguageActive(languageActive ? 0 : 1);
-              }}
+              href={`#${menu[0].section}`}
+              className={styles.navLogo}
+              onClick={() => selectMenu(menu[0].section)}
             >
-              {language[languageActive]}
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width}
+                height={logo.height}
+                layout="fixed"
+              />
             </a>
-          </li>
-        </ul>
+          </div>
 
-        <div
-          className={hamburgerActive ? `${styles.active} ${styles.hamburger}` : styles.hamburger}
-          onClick={() => {
-            setHamburgerActive(!hamburgerActive);
-            setNavMenuActive(!navMenuActive);
-          }}
-        >
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-          <span className={styles.bar}></span>
-        </div>
-      </nav>
-    </header>
+          <ul className={navMenuActive ? styles.active : ''}>
+            {menu.map((menu, index) => {
+              return (
+                <li key={index} className={navMenuItemActive == menu.section ? styles.active : ''}>
+                  <a href={`#${menu.section}`} onClick={() => selectMenu(menu.section)}>
+                    {menu.title[languageActive]}
+                  </a>
+                </li>
+              );
+            })}
+            <li className={styles.navItem}>
+              <a
+                className={styles.language}
+                onClick={() => {
+                  setLanguageActive(languageActive ? 0 : 1);
+                }}
+              >
+                {language[languageActive]}
+              </a>
+            </li>
+          </ul>
+
+          <div
+            className={hamburgerActive ? `${styles.active} ${styles.hamburger}` : styles.hamburger}
+            onClick={() => {
+              setHamburgerActive(!hamburgerActive);
+              setNavMenuActive(!navMenuActive);
+            }}
+          >
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 };
 

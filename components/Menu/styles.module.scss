@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 
-header.header {
+.header {
   
   height: $menu-height;
   width: 100vw;
@@ -12,7 +12,7 @@ header.header {
   background: $color-background;
   box-shadow: 1px 2px 2px #bfc6c9;
 
-  nav.navbar {
+  .navbar {
     
     height: 100%;
     max-width: $container-max-width;
@@ -22,11 +22,7 @@ header.header {
     
     display: flex;
     justify-content: space-between;
-
-    img {
-      height: 55px;
-      width: auto;
-    }
+    align-items: center;
     
     .bar {
       height: 3px;

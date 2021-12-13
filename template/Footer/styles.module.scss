@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+.footer {
+
+  font-size: 1.4rem;
+  border-top: .2rem solid $color-primary;
+  background: $color-secondary;
+
+  div {
+    
+    padding: 4rem 10%;
+
+    color: $color-white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 40px;
+
+    img {
+      height: 15px !important;
+      width: 15px !important;
+
+      border-radius: 2px;
+    }
+
+    &.sitemap {
+      align-items: flex-start;
+
+      max-width: $container-max-width;
+
+      margin: 0 auto;
+      padding: 2rem $container-padding;
+      
+      > ul {
+        width: 25%;
+        
+        > li:first-child {
+          margin: 3rem 0;
+          font-size: 1.6rem;
+          opacity: 1;
+        }
+
+        li {
+          display: block;
+          margin: 1rem;
+          font-size: 1.2rem;
+          opacity: .9;
+        }
+      }     
+    }
+
+    &:last-child {
+      
+      padding: .6rem 0;
+      font-size: 1.2rem;
+  
+      opacity: .6;
+
+      background: rgba($color: #000000, $alpha: .1);
+    }
+  }
+}
