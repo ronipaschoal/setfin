@@ -60,14 +60,31 @@ const Main: NextPage = () => {
           </div>
         </div>
       </section>
-      <section id="features" className={styles.features}>
-        <h1>{features.title[language]}</h1>
-        <p>{features.content[language]}</p>
+      {/* <section id="features" className={styles.features}>
+        <div>
+          <h3>{features.title[language]}</h3>
+        </div>
+        <div>
+          {features.content.map((operation, index) => {
+            return (
+              <div key={index} className={styles.content}>
+                <Image
+                  src={operation.image.src}
+                  alt={operation.image.alt}
+                  height={operation.image.height}
+                  width={operation.image.width}
+                  layout="responsive"
+                />
+                <h3>{operation.title[language]}</h3>
+              </div>
+            );
+          })}
+        </div>
       </section>
       <section id="process" className={styles.process}>
         <h1>{process.title[language]}</h1>
         <p>{process.content[language]}</p>
-      </section>
+      </section> */}
       <section id="contact" className={styles.contact}>
         <br />
         <br />

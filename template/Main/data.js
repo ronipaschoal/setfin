@@ -91,12 +91,46 @@ export const data = {
       width: 576,
     },
     title: [
-      'Afinal, o que nós fazemos?',
-      'After all, what do we do?'
+      'Veja abaixo o maior portfólio de funcionalidades do Brasil!',
+      'See below the largest portfolio of features in Brazil!'
     ],
     content: [
-      'Veja um vídeo como automatizamos a sua operação e logo abaixo as nossas funcionalidades.',
-      'Watch a video of how we automate your operation and our features below.',
+      {
+        image: {
+          src: '/images/integration.png',
+          alt: 'SetFin Logo',
+          height: 650,
+          width: 650,
+        },
+        title: [
+          'Emissão de Notas Fiscais', 
+          ''
+        ],
+      },
+      {
+        image: {
+          src: '/images/integration.png',
+          alt: 'SetFin Logo',
+          height: 650,
+          width: 650,
+        },
+        title: [
+          'Consulta de Notas Fiscais', 
+          ''
+        ],
+      },
+      {
+        image: {
+          src: '/images/integration.png',
+          alt: 'SetFin Logo',
+          height: 650,
+          width: 650,
+        },
+        title: [
+          'Calcule Impostos Próprios', 
+          ''
+        ],
+      }
     ],
   },
   process: {

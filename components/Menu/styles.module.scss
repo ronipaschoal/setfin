@@ -9,8 +9,7 @@
   top: 0;
   z-index: 10;
   
-  background: $color-background;
-  box-shadow: 1px 2px 2px #bfc6c9;
+  background: $color-white;
 
   .navbar {
     
@@ -66,8 +65,8 @@
 
         &.active, &:hover:not(.active) {
 
-          border-bottom: $color-primary .2rem solid;
           a {
+            // border-bottom: $color-primary .2rem solid;
             opacity: 1;
           }
         }
