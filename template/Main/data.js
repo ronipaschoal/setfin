@@ -2,7 +2,7 @@ export const data = {
   home: {
     image: {
       src: '/images/home.png',
-      alt: 'SetFin Logo',
+      alt: 'SetFin Home',
       height: 650,
       width: 888,
     },
@@ -16,11 +16,15 @@ export const data = {
     ],  
   },
   about: {
+    title: [
+      'Veja como podemos contribuir com sua operação!',
+      'See how we can contribute to your operation!'
+    ],
     operation: [
       {
         image: {
           src: '/images/integration.png',
-          alt: 'SetFin Logo',
+          alt: 'Integrações',
           height: 650,
           width: 650,
         },
@@ -32,7 +36,7 @@ export const data = {
       {
         image: {
           src: '/images/efficiency.png',
-          alt: 'SetFin Logo',
+          alt: 'Eficiência Operacional',
           height: 650,
           width: 650,
         },
@@ -44,19 +48,19 @@ export const data = {
       {
         image: {
           src: '/images/analysis.png',
-          alt: 'SetFin Logo',
+          alt: 'Analise de Dados',
           height: 650,
           width: 650,
         },
         title: [
-          'Analise dados de maneira inteligente com regras de  automatizações e tratamento de dados', 
+          'Analise dados de maneira inteligente com regras de automatizações e tratamento de dados', 
           'Analyze data intelligently with automation rules and data handling'
         ]
       },
       {
         image: {
           src: '/images/remote-access.png',
-          alt: 'SetFin Logo',
+          alt: 'Acesso Remoto',
           height: 650,
           width: 650,
         },
@@ -84,12 +88,6 @@ export const data = {
     }
   },
   features: {
-    image: {
-      src: '/images/home.png',
-      alt: 'SetFin Logo',
-      height: 472,
-      width: 576,
-    },
     title: [
       'Veja abaixo o maior portfólio de funcionalidades do Brasil!',
       'See below the largest portfolio of features in Brazil!'
@@ -97,57 +95,181 @@ export const data = {
     content: [
       {
         image: {
-          src: '/images/integration.png',
-          alt: 'SetFin Logo',
-          height: 650,
-          width: 650,
+          src: '/images/issuance_invoices.png',
+          alt: 'Emissão de Notas Fiscais',
+          height: 200,
+          width: 200,
         },
         title: [
           'Emissão de Notas Fiscais', 
-          ''
+          'Issuance of Invoices'
         ],
       },
       {
         image: {
-          src: '/images/integration.png',
-          alt: 'SetFin Logo',
-          height: 650,
-          width: 650,
+          src: '/images/invoice_consultation.png',
+          alt: 'Consulta de Notas Fiscais',
+          height: 200,
+          width: 200,
         },
         title: [
           'Consulta de Notas Fiscais', 
-          ''
+          'Invoice Consultation'
         ],
       },
       {
         image: {
-          src: '/images/integration.png',
-          alt: 'SetFin Logo',
-          height: 650,
-          width: 650,
+          src: '/images/own_taxes.png',
+          alt: 'Calcule Impostos Próprios',
+          height: 200,
+          width: 200,
         },
         title: [
           'Calcule Impostos Próprios', 
-          ''
+          'Calculate Own Taxes'
+        ],
+      },
+      {
+        image: {
+          src: '/images/withholding_taxes.png',
+          alt: 'Calcule Impostos Retidos',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Calcule Impostos Retidos', 
+          'Calculate Withholding Taxes'
+        ],
+      },
+      {
+        image: {
+          src: '/images/collection_guides.png',
+          alt: 'Guias de Recolhimento',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Guias de Recolhimento', 
+          'Collection Guides'
+        ],
+      },
+      {
+        image: {
+          src: '/images/accounting_management.png',
+          alt: 'Gestão Contábil',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Gestão Contábil', 
+          'Accounting Management'
+        ],
+      },
+      {
+        image: {
+          src: '/images/accounting_reconciliation.png',
+          alt: 'Conciliação Contábil',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Conciliação Contábil', 
+          'Accounting Reconciliation'
+        ],
+      },
+      {
+        image: {
+          src: '/images/financial_management.png',
+          alt: 'Gestão Financeira',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Gestão Financeira', 
+          'Financial Management'
+        ],
+      },
+      {
+        image: {
+          src: '/images/financial_reconciliation.png',
+          alt: 'Conciliação Financeira',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Conciliação Financeira', 
+          'Financial Reconciliation'
+        ],
+      },
+      {
+        image: {
+          src: '/images/certificate.png',
+          alt: 'Certificado Digital A1 e A3',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Certificado Digital A1 e A3', 
+          'A1 and A3 Digital Certificate'
+        ],
+      },
+      {
+        image: {
+          src: '/images/task_management.png',
+          alt: 'Gestão de Tarefas',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Gestão de Tarefas', 
+          'Task Management'
+        ],
+      },
+      {
+        image: {
+          src: '/images/dashboards_controls.png',
+          alt: 'Dashboards e Controles',
+          height: 200,
+          width: 200,
+        },
+        title: [
+          'Dashboards e Controles', 
+          'Dashboards and Controls'
         ],
       }
     ],
   },
-  process: {
+  automations: {
     image: {
-      src: '/images/home.png',
-      alt: 'SetFin Logo',
-      height: 472,
-      width: 576,
+      src: '/images/automations.png',
+      alt: 'Automatize sua operação por completo e ganhe eficiência, qualidade e segurança em suas informações.',
+      height: 650,
+      width: 650,
     },
     title: [
-      'Veja abaixo o maior portfólio de funcionalidades do Brasil!',
-      'See below the largest portfolio of features in Brazil!'
+      'Conheça a plataforma Setfin e transforme sua operação com nossas automatizações!',
+      'Discover the Setfin platform and transform your operation with our automations!'
     ],
     content: [
-      'Aceleradora de processos contábeis, financeiros e administrativos.',
-      'Accelerator of accounting, financial and administrative processes.',
-    ],  
+      'Automatize sua operação por completo e ganhe eficiência, qualidade e segurança em suas informações.',
+      'Automate your operation completely and gain efficiency, quality and security in your information',
+    ],
+  },
+  model: {
+    image: {
+      src: '/images/model.png',
+      alt: 'Estamos transformando o modelo operacional das empresas no Brasil!',
+      height: 650,
+      width: 650,
+    },
+    title: [
+      'Estamos transformando o modelo operacional das empresas no Brasil!',
+      'We are transforming the operating model of companies in Brazil!'
+    ],
+    content: [
+      'Estamos homologados em 100% dos estados no Brasil e em mais de 1.620 municípios para acelerar e dar qualidade e segurança à você!',
+      'We are approved in 100% of the states in Brazil and in more than 1,620 cities to speed up and give you quality and safety!',
+    ],
   },
   contact: {
     content: [

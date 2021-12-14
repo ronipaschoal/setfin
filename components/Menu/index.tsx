@@ -55,7 +55,7 @@ const Menu: NextPage = () => {
         <nav className={styles.navbar}>
           <div className={styles.logo}>
             <a
-              href={`#${menu[0].section}`}
+              href="#home"
               className={styles.navLogo}
               onClick={() => selectMenu(menu[0].section)}
             >

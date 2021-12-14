@@ -11,7 +11,7 @@ import styles from './styles.module.scss';
 const Main: NextPage = () => {
 
   const language = useContext(LanguageContext).languageActive;
-  const { home, about, features, process, contact } = data;
+  const { home, about, features, automations, contact, model } = data;
 
   return (
     <main className={styles.main}>
@@ -32,6 +32,7 @@ const Main: NextPage = () => {
         </div>
       </section>
       <section id="about" className={styles.about}>
+        <h3>{about.title}</h3>
         <div className={styles.operation}>
           {about.operation.map((operation, index) => {
               return (
@@ -43,7 +44,7 @@ const Main: NextPage = () => {
                     width={operation.image.width}
                     layout="responsive"
                   />
-                  <h3>{operation.title[language]}</h3>
+                  <h2>{operation.title[language]}</h2>
                 </div>
               );
           })}
@@ -60,14 +61,12 @@ const Main: NextPage = () => {
           </div>
         </div>
       </section>
-      {/* <section id="features" className={styles.features}>
-        <div>
+      <section id="features" className={styles.features}>
+        <div className={styles.content}>
           <h3>{features.title[language]}</h3>
-        </div>
-        <div>
           {features.content.map((operation, index) => {
             return (
-              <div key={index} className={styles.content}>
+              <div key={index}>
                 <Image
                   src={operation.image.src}
                   alt={operation.image.alt}
@@ -75,20 +74,48 @@ const Main: NextPage = () => {
                   width={operation.image.width}
                   layout="responsive"
                 />
-                <h3>{operation.title[language]}</h3>
+                <h2>{operation.title[language]}</h2>
               </div>
             );
           })}
         </div>
+        <div className={styles.automations}>
+          <div>
+            <h2 className={styles.title}>{automations.title[language]}</h2>
+            <p className={styles.content}>{automations.content[language]}</p>
+          </div>
+          <div className={styles.image}>
+            <Image
+              src={automations.image.src}
+              alt={automations.image.alt}
+              height={automations.image.height}
+              width={automations.image.width}
+              layout="responsive"
+            />
+          </div>
+        </div>
+        <div className={styles.model}>
+          <div className={styles.image}>
+            <Image
+              src={model.image.src}
+              alt={model.image.alt}
+              height={model.image.height}
+              width={model.image.width}
+              layout="responsive"
+            />
+          </div>
+          <div>
+            <h2 className={styles.title}>{model.title[language]}</h2>
+            <p className={styles.content}>{model.content[language]}</p>
+          </div>
+        </div>
       </section>
-      <section id="process" className={styles.process}>
-        <h1>{process.title[language]}</h1>
-        <p>{process.content[language]}</p>
-      </section> */}
       <section id="contact" className={styles.contact}>
         <br />
         <br />
         <a href="mailto:comercial@setfin.com.br">{contact.content[language]}</a>
+        <br />
+        <br />
       </section>
     </main>
   );
