@@ -89,8 +89,8 @@ export const data = {
   },
   features: {
     title: [
-      'Veja abaixo o maior portfólio de funcionalidades do Brasil!',
-      'See below the largest portfolio of features in Brazil!'
+      'O maior portfólio de funcionalidades do Brasil!',
+      'The largest portfolio of features in Brazil!'
     ],
     content: [
       {

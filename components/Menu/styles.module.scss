@@ -4,33 +4,31 @@
   
   height: $menu-height;
   width: 100vw;
-  
   position: fixed;
   top: 0;
   z-index: 10;
-  
   background: $color-white;
 
   .navbar {
-    
     height: 100%;
     max-width: $container-max-width;
-
     margin: 0 auto;
-    padding: 0 $container-padding 0;
-    
+    padding: 0 $container-padding;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .navLogo span {
+      height: 35px !important;
+      width: 35px !important;
+    }
     
     .bar {
       height: 3px;
       width: 25px;
-
       display: block;
       margin: 5px auto;
       background-color: $color-primary;
-      
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
     }
@@ -38,36 +36,28 @@
     ul {
       height: 100%;
       width: 100%;
-      
       position: fixed;
       top: $menu-height;
       left: -100%;
-      
       text-align: center;
-      
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      
       background: $color-white;
-      
       transition: 0.3s;
-      
+
       &.active {
         left: 0;
       }
-      
+
       li {
         width: 50%;
 
         margin: 0 auto;
         padding: 2.5rem 0;
 
-        &.active, &:hover:not(.active) {
-
-          a {
-            opacity: 1;
-          }
+        &.active a, &:hover:not(.active) a {
+          opacity: 1;
         }
 
         a {
@@ -102,7 +92,6 @@
       display: block;
       cursor: pointer;
       padding: 10px 0;
-
       &.active {
         .bar:nth-child(2) {
           opacity: 0;

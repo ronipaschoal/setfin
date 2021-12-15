@@ -32,7 +32,7 @@ const Main: NextPage = () => {
         </div>
       </section>
       <section id="about" className={styles.about}>
-        <h3>{about.title}</h3>
+        <h3>{about.title[language]}</h3>
         <div className={styles.operation}>
           {about.operation.map((operation, index) => {
               return (

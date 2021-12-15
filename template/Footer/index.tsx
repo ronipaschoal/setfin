@@ -81,11 +81,6 @@ const Footer: NextPage = () => {
       <div>
         {copyright[language]}
       </div>
-      <div>
-        <a href="https://ronipaschoal.com.br" target="_blank" rel="noreferrer">
-          {developed[language]}
-        </a>
-      </div>
     </footer>
   );
 };

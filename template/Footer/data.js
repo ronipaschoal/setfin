@@ -156,8 +156,4 @@ export const data = {
     '© 2021 Setfin Tecnologia Ltda. Todos os direitos reservados.',
     '© 2021 Setfin Tecnologia Ltda. All rights reserved.'
   ],
-  developed: [
-    'Desenvolvido por Roni Paschoal',
-    'Developed by Roni Paschoal'
-  ],
 };
