@@ -16,7 +16,7 @@ const Header: NextPage = () => {
 
       <link href='./fonts/ubuntu-light.ttf' as="font" crossOrigin=""></link>
       <meta name="description" content={description[languageActive]} />
-      <link rel="icon" href="./images/favicon.png" type="image/png" />
+      <link rel="icon" href="./images/logo-setfin.svg" type="image/png" />
     </Head>
   );
 };

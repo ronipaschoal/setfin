@@ -1,6 +1,6 @@
 export const data = {
   logo: {
-    src: '/images/setfin.png',
+    src: '/images/logo-setfin.svg',
     alt: 'SetFin Logo',
     width: 45,
     height: 45,
